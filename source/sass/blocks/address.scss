@@ -1,0 +1,16 @@
+.address__contacts {
+  background-color: var(--bg-grey, #f4f1ed);
+}
+
+.address__map {
+  position: relative;
+  min-height: 281px;
+
+  @media (min-width: 708px) {
+    min-height: 374px;
+  }
+
+  @media (min-width: 1200px) {
+    min-height: 422px;
+  }
+}

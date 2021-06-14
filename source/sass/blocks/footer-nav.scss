@@ -1,0 +1,23 @@
+.footer-nav {
+  padding: 0;
+  list-style: none;
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--dark-blue, #122947);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.footer-nav__item {
+  min-width: 90px;
+  margin-right: 9px;
+  margin-bottom: 25px;
+}
+
+.footer-nav__link {
+  text-decoration: none;
+  color: inherit;
+}

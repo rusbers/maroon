@@ -1,0 +1,36 @@
+.page-header {
+  &::after {
+    content: "";
+    height: 67px;
+    width: 100%;
+    display: block;
+    background-color: var(--grey-4, #f4f4f4);
+  }
+}
+
+.page-header__inner {
+  position: relative;
+}
+
+.page-header__top {
+  border: 1px solid var(--grey-5, #dbdce0);
+}
+
+.page-header__top-inner {
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    width: 35%;
+    height: 1px;
+  }
+}
+
+.page-header__user-menu {
+  margin: 0;
+}
+
+.page-header__nav-list {
+  margin: 0;
+}

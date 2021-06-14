@@ -1,0 +1,11 @@
+.link {
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: 500;
+  color: var(--dark-blue, #122947);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

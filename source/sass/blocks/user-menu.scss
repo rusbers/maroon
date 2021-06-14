@@ -1,0 +1,16 @@
+.user-menu {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 35%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.user-menu__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

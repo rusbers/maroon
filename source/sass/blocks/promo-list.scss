@@ -1,0 +1,11 @@
+.promo-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-list__item {
+  display: flex;
+  flex-direction: column;
+}
