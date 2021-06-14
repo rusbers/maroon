@@ -1,13 +1,749 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
-    <link rel="stylesheet" href="css/styles.min.css">
-  </head>
-  <body>
-    <p>catalog</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body class="page__body">
+
+  <header class="page-header">
+    <div class="page-header__inner">
+      <div class="page-header__top">
+        <div class="page__container page-header__top-inner">
+          <a class="logo" href="index.html">
+            <picture>
+              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
+              <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
+            </picture>
+          </a>
+          <ul class="page-header__user-menu user-menu">
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#">
+                <span class="page__a11y-hidden">Войти</span>
+                <svg width="13" height="16">
+                  <use xlink:href="img/stack.svg#user"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#">
+                <span class="page__a11y-hidden">Список покупок</span>
+                <svg width="14" height="16">
+                  <use xlink:href="img/stack.svg#buy"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page__container page-header__bottom">
+        <nav class="main-nav">
+          <button class="menu-btn" hidden>
+            <span class="page__a11y-hidden">Кнопка меню</span>
+            <svg class="menu-btn__opened" width="14" height="14">
+              <use xlink:href="img/stack.svg#to-close"></use>
+            </svg>
+            <svg class="menu-btn__closed" width="22" height="11">
+              <use xlink:href="img/stack.svg#to-open"></use>
+            </svg>
+          </button>
+          <ul class="page-header__nav-list nav-list">
+            <li class="nav-list__item"><a class="nav-list__link">Каталог</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="page__social-media social-media">
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">facebook</span>
+              <svg width="11" height="20">
+                <use xlink:href="img/stack.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">instagram</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/stack.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">twitter</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/stack.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div>
+      <h1 class="title">Каталог</h1>
+      <button class="button button--form_open"><span>Фильтр</span></button> <!-- button--form_close -->
+    </div>
+
+    <section class="page__container sorting">
+      <h2 class="page__a11y-hidden">Форма сортировки списка товаров</h2>
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="form__fieldset">
+          <legend>Уход для лица</legend>
+          <button class="expand"><span class="page__a11y-hidden">Развернуть опции</span></button>
+          <ul class="choice-list">
+            <li class="choice-list__item">
+              <label class="label" for="face-creams">Крема</label>
+              <input class="input" type="radio" id="face-creams" name="face-care" value="creams">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="face-serums">Сыворотки</label>
+              <input class="input" type="radio" id="face-serums" name="face-care" value="serums">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="face-masks">Маски</label>
+              <input class="input" type="radio" id="face-masks" name="face-care" value="masks">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="face-foams">Пенки</label>
+              <input class="input" type="radio" id="face-foams" name="face-care" value="foams">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="face-tonics">Тоники</label>
+              <input class="input" type="radio" id="face-tonics" name="face-care" value="tonics">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="face-powders">Пудры</label>
+              <input class="input" type="radio" id="face-powders" name="face-care" value="powders">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend>Уход для тела</legend>
+          <button class="expand"><span class="page__a11y-hidden">Развернуть опции</span></button>
+          <ul class="choice-list">
+            <li class="choice-list__item">
+              <label class="label" for="body-creams">Крема</label>
+              <input class="input" type="radio" id="body-creams" name="body-care" value="creams">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="body-oils">Масла</label>
+              <input class="input" type="radio" id="body-oils" name="body-care" value="oils">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="body-scrubs">Скрабы</label>
+              <input class="input" type="radio" id="body-scrubs" name="body-care" value="scrubs">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="body-soap">Мыло</label>
+              <input class="input" type="radio" id="body-soap" name="body-care" value="soap">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="body-bath-bombs">Бомбочки для ванны</label>
+              <input class="input" type="radio" id="body-bath-bombs" name="body-care" value="bath-bombs">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="body-bath-salt">Соль для ванны</label>
+              <input class="input" type="radio" id="body-bath-salt" name="body-care" value="bath-salt">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend>Тип кожи</legend>
+          <button class="expand"><span class="page__a11y-hidden">Развернуть опции</span></button>
+          <ul class="choice-list">
+            <li class="choice-list__item">
+              <label class="label" for="skin-normal">Нормальная</label>
+              <input class="input" type="radio" id="skin-normal" name="skin-type" value="normal">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="skin-dry">Сухая</label>
+              <input class="input" type="radio" id="skin-dry" name="skin-type" value="dry">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="skin-oily">Жирная</label>
+              <input class="input" type="radio" id="skin-oily" name="skin-type" value="oily">
+            </li>
+            <li class="choice-list__item">
+              <label class="label" for="skin-combined">Комбинированная</label>
+              <input class="input" type="radio" id="skin-combined" name="skin-type" value="combined">
+            </li>
+          </ul>
+        </fieldset>
+        <div class="form__buttons">
+          <button class="button" type="submit">Применить</button>
+          <button class="button" type="reset">Сбросить</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="page__container catalog">
+      <h2 class="page__a11y-hidden">Список товаров</h2>
+
+      <ul class="goods-list">
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-high@1x.jpg 1x, img/content/catalog/big-screens/big-high@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-high@1x.jpg 1x, img/content/catalog/medium-screens/med-high@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-high@1x.jpg 1x, img/content/catalog/small-screens/small-high@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-high@1x.jpg 1x, img/content/catalog/big-screens/big-high@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-high@1x.jpg 1x, img/content/catalog/medium-screens/med-high@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-high@1x.jpg" srcset="img/content/catalog/small-screens/small-high@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">High</h3></td>
+                  <td>990</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">крем для лица</p></td>
+                  <td>50ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-rest@1x.jpg 1x, img/content/catalog/big-screens/big-rest@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-rest@1x.jpg 1x, img/content/catalog/medium-screens/med-rest@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-rest@1x.jpg 1x, img/content/catalog/small-screens/small-rest@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-rest@1x.jpg 1x, img/content/catalog/big-screens/big-rest@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-rest@1x.jpg 1x, img/content/catalog/medium-screens/med-rest@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-rest@1x.jpg" srcset="img/content/catalog/small-screens/small-rest@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Rest</h3></td>
+                  <td>690</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">минеральная пудра</p></td>
+                  <td>20g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-rose@1x.jpg 1x, img/content/catalog/big-screens/big-rose@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-rose@1x.jpg 1x, img/content/catalog/medium-screens/med-rose@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-rose@1x.jpg 1x, img/content/catalog/small-screens/small-rose@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-rose@1x.jpg 1x, img/content/catalog/big-screens/big-rose@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-rose@1x.jpg 1x, img/content/catalog/medium-screens/med-rose@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-rose@1x.jpg" srcset="img/content/catalog/small-screens/small-rose@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Rose</h3></td>
+                  <td>890</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">крем для лица</p></td>
+                  <td>50ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-milk@1x.jpg 1x, img/content/catalog/big-screens/big-milk@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-milk@1x.jpg 1x, img/content/catalog/medium-screens/med-milk@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-milk@1x.jpg 1x, img/content/catalog/small-screens/small-milk@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-milk@1x.jpg 1x, img/content/catalog/big-screens/big-milk@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-milk@1x.jpg 1x, img/content/catalog/medium-screens/med-milk@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-milk@1x.jpg" srcset="img/content/catalog/small-screens/small-milk@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Milk</h3></td>
+                  <td>790</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">масло для тела</p></td>
+                  <td>150ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-paradise@1x.jpg 1x, img/content/catalog/big-screens/big-paradise@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-paradise@1x.jpg 1x, img/content/catalog/medium-screens/med-paradise@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-paradise@1x.jpg 1x, img/content/catalog/small-screens/small-paradise@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-paradise@1x.jpg 1x, img/content/catalog/big-screens/big-paradise@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-paradise@1x.jpg 1x, img/content/catalog/medium-screens/med-paradise@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-paradise@1x.jpg" srcset="img/content/catalog/small-screens/small-paradise@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Paradise</h3></td>
+                  <td>590</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">минеральная пудра</p></td>
+                  <td>15g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-sun@1x.jpg 1x, img/content/catalog/big-screens/big-sun@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-sun@1x.jpg 1x, img/content/catalog/medium-screens/med-sun@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-sun@1x.jpg 1x, img/content/catalog/small-screens/small-sun@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-sun@1x.jpg 1x, img/content/catalog/big-screens/big-sun@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-sun@1x.jpg 1x, img/content/catalog/medium-screens/med-sun@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-sun@1x.jpg" srcset="img/content/catalog/small-screens/small-sun@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Sun</h3></td>
+                  <td>90</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">бомбочка для ванны</p></td>
+                  <td>20g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-violet@1x.jpg 1x, img/content/catalog/big-screens/big-violet@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-violet@1x.jpg 1x, img/content/catalog/medium-screens/med-violet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-violet@1x.jpg 1x, img/content/catalog/small-screens/small-violet@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-violet@1x.jpg 1x, img/content/catalog/big-screens/big-violet@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-violet@1x.jpg 1x, img/content/catalog/medium-screens/med-violet@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-violet@1x.jpg" srcset="img/content/catalog/small-screens/small-violet@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Violet</h3></td>
+                  <td>890</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">крем для лица</p></td>
+                  <td>50ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-clean@1x.jpg 1x, img/content/catalog/big-screens/big-clean@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-clean@1x.jpg 1x, img/content/catalog/medium-screens/med-clean@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-clean@1x.jpg 1x, img/content/catalog/small-screens/small-clean@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-clean@1x.jpg 1x, img/content/catalog/big-screens/big-clean@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-clean@1x.jpg 1x, img/content/catalog/medium-screens/med-clean@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-clean@1x.jpg" srcset="img/content/catalog/small-screens/small-clean@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Clean</h3></td>
+                  <td>490</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">маска для лица</p></td>
+                  <td>100g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-coconut@1x.jpg 1x, img/content/catalog/big-screens/big-coconut@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-coconut@1x.jpg 1x, img/content/catalog/medium-screens/med-coconut@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-coconut@1x.jpg 1x, img/content/catalog/small-screens/small-coconut@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-coconut@1x.jpg 1x, img/content/catalog/big-screens/big-coconut@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-coconut@1x.jpg 1x, img/content/catalog/medium-screens/med-coconut@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-coconut@1x.jpg" srcset="img/content/catalog/small-screens/small-coconut@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Coconut</h3></td>
+                  <td>990</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">масло для тела</p></td>
+                  <td>300ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lavander@1x.jpg 1x, img/content/catalog/big-screens/big-lavander@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lavander@1x.jpg 1x, img/content/catalog/medium-screens/med-lavander@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-lavander@1x.jpg 1x, img/content/catalog/small-screens/small-lavander@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lavander@1x.jpg 1x, img/content/catalog/big-screens/big-lavander@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lavander@1x.jpg 1x, img/content/catalog/medium-screens/med-lavander@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-lavander@1x.jpg" srcset="img/content/catalog/small-screens/small-lavander@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">lavander</h3></td>
+                  <td>290</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">мыло ручной работы</p></td>
+                  <td>50g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-lotos@1x.jpg 1x, img/content/catalog/small-screens/small-lotos@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-lotos@1x.jpg" srcset="img/content/catalog/small-screens/small-lotos@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Lotos</h3></td>
+                  <td>890</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">маска для лица</p></td>
+                  <td>50ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-earth@1x.jpg 1x, img/content/catalog/big-screens/big-earth@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-earth@1x.jpg 1x, img/content/catalog/medium-screens/med-earth@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-earth@1x.jpg 1x, img/content/catalog/small-screens/small-earth@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-earth@1x.jpg 1x, img/content/catalog/big-screens/big-earth@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-earth@1x.jpg 1x, img/content/catalog/medium-screens/med-earth@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-earth@1x.jpg" srcset="img/content/catalog/small-screens/small-earth@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Earth</h3></td>
+                  <td>90</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">бомбочка для ванны</p></td>
+                  <td>20g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+      </ul>
+
+      <div class="pagination">
+        <div class="pages">
+          <a class="page" href="#">1</a>
+          <a class="page" href="#">8</a>
+        </div>
+        <div class="flipping-page">
+          <a class="flip flip--prev" href="#"><span>Листнуть назад</span></a>
+          <a class="flip flip--next" href="#"><span>Листнуть вперёд</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page__container recently-viewed">
+      <h2 class="title">Вы недавно смотрели</h2>
+
+      <ul class="goods-list">
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-clean@1x.jpg 1x, img/content/catalog/big-screens/big-clean@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-clean@1x.jpg 1x, img/content/catalog/medium-screens/med-clean@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-clean@1x.jpg 1x, img/content/catalog/small-screens/small-clean@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-clean@1x.jpg 1x, img/content/catalog/big-screens/big-clean@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-clean@1x.jpg 1x, img/content/catalog/medium-screens/med-clean@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-clean@1x.jpg" srcset="img/content/catalog/small-screens/small-clean@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Clean</h3></td>
+                  <td>490</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">маска для лица</p></td>
+                  <td>100g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-lotos@1x.jpg 1x, img/content/catalog/small-screens/small-lotos@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-lotos@1x.jpg" srcset="img/content/catalog/small-screens/small-lotos@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Lotos</h3></td>
+                  <td>890</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">маска для лица</p></td>
+                  <td>50ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lavander@1x.jpg 1x, img/content/catalog/big-screens/big-lavander@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lavander@1x.jpg 1x, img/content/catalog/medium-screens/med-lavander@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-lavander@1x.jpg 1x, img/content/catalog/small-screens/small-lavander@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lavander@1x.jpg 1x, img/content/catalog/big-screens/big-lavander@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-lavander@1x.jpg 1x, img/content/catalog/medium-screens/med-lavander@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-lavander@1x.jpg" srcset="img/content/catalog/small-screens/small-lavander@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">lavander</h3></td>
+                  <td>290</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">мыло ручной работы</p></td>
+                  <td>50g</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-coconut@1x.jpg 1x, img/content/catalog/big-screens/big-coconut@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-coconut@1x.jpg 1x, img/content/catalog/medium-screens/med-coconut@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-coconut@1x.jpg 1x, img/content/catalog/small-screens/small-coconut@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-coconut@1x.jpg 1x, img/content/catalog/big-screens/big-coconut@2x.jpg 2x">
+                <source media="(min-width: 708px)" srcset="img/content/catalog/medium-screens/med-coconut@1x.jpg 1x, img/content/catalog/medium-screens/med-coconut@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-coconut@1x.jpg" srcset="img/content/catalog/small-screens/small-coconut@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tr class="determination__row determination__row--title">
+                  <td><h3 class="product__title">Coconut</h3></td>
+                  <td>990</td>
+                </tr>
+                <tr class="determination__row">
+                  <td><p class="product__description">масло для тела</p></td>
+                  <td>300ml</td>
+                </tr>
+              </table>
+            </article>
+          </a>
+        </li>
+      </ul>
+
+      <div class="pagination">
+        <div class="pages">
+          <a class="page" href="#">1</a>
+          <a class="page" href="#">3</a>
+        </div>
+        <div class="flipping-page">
+          <a class="flip flip--prev" href="#"><span>Листнуть назад</span></a>
+          <a class="flip flip--next" href="#"><span>Листнуть вперёд</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page__container subscribe">
+      <div class="subscribe__text">
+        <h2 class="page__a11y-hidden">Подписаться</h2>
+        <p class="title">Присоединяйтесь к нам</p>
+        <div class="text">
+          <p>Подпишитесь на наш аккаунт <a href="#">@marooncare</a> и узнавайте о новиках и акциях первыми</p>
+        </div>
+        <a class="button" href="#">Подписаться</a>
+      </div>
+      <div class="subscribe__collage collage">
+        <picture>
+          <source type="image/webp" srcset="img/content/collage/collage-1@1x.webp 1x, img/content/collage/collage-1@2x.webp 2x">
+          <img class="collage__img" src="img/content/collage/collage-1@1x.jpg" srcset="img/content/collage/collage-1@2x.jpg 2x" width="145" height="145" alt="lorem">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/collage/collage-2@1x.webp 1x, img/content/collage/collage-2@2x.webp 2x">
+          <img class="collage__img" src="img/content/collage/collage-2@1x.jpg" srcset="img/content/collage/collage-2@2x.jpg 2x" width="145" height="145" alt="lorem">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/collage/collage-3@1x.webp 1x, img/content/collage/collage-3@2x.webp 2x">
+          <img class="collage__img" src="img/content/collage/collage-3@1x.jpg" srcset="img/content/collage/collage-3@2x.jpg 2x" width="145" height="145" alt="lorem">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/collage/collage-4@1x.webp 1x, img/content/collage/collage-4@2x.webp 2x">
+          <img class="collage__img" src="img/content/collage/collage-4@1x.jpg" srcset="img/content/collage/collage-4@2x.jpg 2x" width="145" height="145" alt="lorem">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/collage/collage-5@1x.webp 1x, img/content/collage/collage-5@2x.webp 2x">
+          <img class="collage__img" src="img/content/collage/collage-5@1x.jpg" srcset="img/content/collage/collage-5@2x.jpg 2x" width="145" height="145" alt="lorem">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/collage/collage-6@1x.webp 1x, img/content/collage/collage-6@2x.webp 2x">
+          <img class="collage__img" src="img/content/collage/collage-6@1x.jpg" srcset="img/content/collage/collage-6@2x.jpg 2x" width="145" height="145" alt="lorem">
+        </picture>
+      </div>
+    </section>
+
+    <section class="page__container address">
+      <div class="address__contacts">
+        <h2 class="title">Контакты</h2>
+        <dl class="contact-list">
+          <dt class="contact-list__title">Адрес</dt>
+          <dd class="contact-list__info">Санкт-Петербург, ул. Большая Конюшенная, 19</dd>
+          <dt class="contact-list__title">Телефон</dt>
+          <dd class="contact-list__info"><a href="tel:0079238889060"></a>+7 (923) 888-90-60</dd>
+          <dt class="contact-list__title">E-mail</dt>
+          <dd class="contact-list__info"><a href="mailto:info@maroon.ru">info@maroon.ru</a></dd>
+        </dl>
+        <ul class="page__social-media social-media">
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">facebook</span>
+              <svg width="11" height="20">
+                <use xlink:href="img/stack.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">instagram</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/stack.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">twitter</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/stack.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="address__map map">
+        <picture>
+          <source type="image/webp" srcset="img/content/map/map-big@1x.webp 1x, img/content/map/map-big@2x.webp 2x">
+          <source type="image/webp" srcset="img/content/map/map-medium@1x.webp 1x, img/content/map/map-medium@2x.webp 2x">
+          <source type="image/webp" srcset="img/content/map/map-small@1x.webp 1x, img/content/map/map-small@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/content/map/map-big@1x.png 1x, img/content/map/map-big@2x.png 2x">
+          <source media="(min-width: 708px)" srcset="img/content/map/map-medium@1x.png 1x, img/content/map/map-medium@2x.png 2x">
+          <img class="map__picture" src="img/content/map/map-small@1x.png" srcset="img/content/map/map-small@2x.png 2x" width="290" height="281" alt="lorem">
+        </picture>
+        <iframe class="map__source" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i708!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20Rusia%2C%20191186!5e0!3m2!1sro!2sro!4v1621610524223!5m2!1sro!2sro" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__nav">
+      <div class="page__container">
+        <a class="page-footer__logo logo">
+          <picture>
+            <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
+            <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
+          </picture>
+        </a>
+        <ul class="page-footer__footer-nav footer-nav">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Каталог</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+        </ul>
+        <ul class="page__social-media social-media">
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">facebook</span>
+              <svg width="11" height="20">
+                <use xlink:href="img/stack.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">instagram</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/stack.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a class="social-media__link" href="#">
+              <span class="page__a11y-hidden">twitter</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/stack.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="page__container page-footer__copy">
+      <p><span>Maroon</span> 2020 Все права защищены</p>
+      <p><a class="privacy-link" href="#">Политика конфиденциальности</a></p>
+    </div>
+  </footer>
+</body>
+
 </html>
