@@ -7,3 +7,41 @@
   color: var(--dark-blue);
   background-color: var(--page-bg, #f8f8f6);
 }
+
+.page__body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.page__container {
+  padding: 0 15px;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &--bestsellers {
+    overflow: hidden;
+  }
+}
+
+.page__a11y-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.page__social-media {
+  margin: 0;
+}
+
+.page__promo-list {
+  margin: 0;
+}
+
+.page__bestsellers-list {
+  margin: 0;
+}

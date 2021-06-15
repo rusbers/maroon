@@ -1,0 +1,36 @@
+.care-program {
+  &::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 252px;
+    background-image: url("../../img/background/care-program-small@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/care-program-small@2x.jpg");
+    }
+
+    @media (min-width: 708px) {
+      width: 403px;
+      height: 398px;
+      background-image: url("../../img/background/care-program-medium@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/care-program-medium@2x.jpg");
+      }
+    }
+
+    @media (min-width: 1200px) {
+      width: 670px;
+      height: 451px;
+      background-image: url("../../img/background/care-program-big@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background/care-program-big@2x.jpg");
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.nav-list {
+  padding: 0;
+  list-style: none;
+  font-family: var(--raleway), "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 130%;
+  font-weight: 500;
+}
+
+.nav-list__link {
+  text-decoration: none;
+  color: var(--dark-blue);
+}

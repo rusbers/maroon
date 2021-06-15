@@ -1,0 +1,39 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 220px;
+  min-height: 297px;
+}
+
+.product__title {
+  font-family: var(--raleway), "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 145%;
+  font-weight: 500;
+  text-align: center;
+  color: var(--dark-blue, #122947);
+}
+
+.product__description {
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 13px;
+  line-height: 145%;
+  font-weight: 400;
+  text-align: center;
+  color: var(--grey, #9a9da0);
+  text-transform: lowercase;
+}
+
+.product__link {
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 13px;
+  line-height: 145%;
+  color: var(--dark-blue, #122947);
+  text-decoration: none;
+  border-bottom: 1px solid var(--dark-blue, #122947);
+  padding-bottom: 7px;
+  text-align: center;
+}

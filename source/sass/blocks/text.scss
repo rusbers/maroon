@@ -1,0 +1,17 @@
+.text,
+.text h2,
+.text a {
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  color: var(--dark-blue, #122947);
+  text-align: center;
+  text-decoration: none;
+
+  &--hidden_mob {
+    @media (max-width: 767.9px) {
+      display: none;
+    }
+  }
+}

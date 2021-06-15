@@ -1,0 +1,13 @@
+.social-media {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.social-media__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
