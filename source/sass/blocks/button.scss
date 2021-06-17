@@ -5,4 +5,11 @@
   font-weight: 500;
   color: var(--dark-blue, #122947);
   text-decoration: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.button__text {
+  display: none;
 }

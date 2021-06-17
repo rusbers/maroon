@@ -1,0 +1,16 @@
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+
+.form__legend {
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
+  color: var(--dark-blue, #122947);
+  width: 100%;
+  border-bottom: 1px solid var(--grey-5, #dbdce0);
+}

@@ -1,0 +1,11 @@
+.flipping-page {
+  display: flex;
+}
+
+.flipping-page__flip {
+  text-decoration: none;
+
+  &--prev {
+    margin-right: 30px;
+  }
+}
