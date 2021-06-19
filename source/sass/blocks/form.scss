@@ -3,6 +3,10 @@
   padding: 0;
   border: none;
   position: relative;
+
+  &--cart-layout {
+    display: flex;
+  }
 }
 
 .form__legend {
@@ -13,4 +17,14 @@
   color: var(--dark-blue, #122947);
   width: 100%;
   border-bottom: 1px solid var(--grey-5, #dbdce0);
+  padding: 0;
+
+  &--fontset {
+    line-height: 145%;
+    border: none;
+  }
+
+  &--cart-layout {
+    width: auto;
+  }
 }

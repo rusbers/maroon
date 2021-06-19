@@ -11,6 +11,10 @@
   cursor: pointer;
   padding-left: 26px;
 
+  &--fontset {
+    font-weight: 500;
+  }
+
   &::before {
     content: "";
     box-sizing: border-box;
