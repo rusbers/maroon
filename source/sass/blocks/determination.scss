@@ -1,0 +1,27 @@
+.determination {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.determination tbody {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.determination__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 13px;
+  line-height: 145%;
+  font-weight: 400;
+  color: var(--grey, #9a9da0);
+
+  &--title {
+    font-weight: 500;
+    color: var(--dark-blue, #122947);
+  }
+}

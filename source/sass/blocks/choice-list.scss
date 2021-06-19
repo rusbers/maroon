@@ -1,0 +1,13 @@
+.choice-list {
+  list-style: none;
+  padding: 0;
+
+  &--cart-layout {
+    display: flex;
+  }
+}
+
+.choice-list__item {
+  display: flex;
+  align-items: center;
+}

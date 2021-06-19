@@ -87,47 +87,66 @@
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page__container page-main">
     <h1 class="page__a11y-hidden">Карточка товара</h1>
     <section class="cart">
       <div class="cart__desc">
-        <h2 class="product-title">Rose</h2>
-        <p class="product-lead">крем для лица</p>
-        <div class="text">
+        <h2 class="cart__title">Rose</h2>
+        <p class="cart__lead">крем для лица</p>
+        <div class="cart__text text">
           <p>Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей.</p>
           <p>Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток.</p>
         </div>
         <dl class="product-details">
           <dt class="product-details__title">
             <span>Состав</span>
-            <button><span class="page__a11y-hidden">Развернуть</span></button>
+            <button class="product-details__expand expand" type="button">
+              <span class="page__a11y-hidden">Развернуть</span>
+              <svg class="expand__opened" width="12" height="2">
+                <use xlink:href="img/stack.svg#minus"></use>
+              </svg>
+              <svg class="expand__closed" width="12" height="12">
+                <use xlink:href="img/stack.svg#plus"></use>
+              </svg>
+            </button>
           </dt>
           <dd class="product-details__desc">
             Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.
           </dd>
           <dt class="product-details__title">
             <span>Способ применения</span>
-            <button><span class="page__a11y-hidden">Развернуть</span></button>
+            <button class="product-details__expand expand" type="button">
+              <span class="page__a11y-hidden">Развернуть</span>
+              <svg class="expand__opened" width="12" height="2">
+                <use xlink:href="img/stack.svg#minus"></use>
+              </svg>
+              <svg class="expand__closed" width="12" height="12">
+                <use xlink:href="img/stack.svg#plus"></use>
+              </svg>
+            </button>
           </dt>
           <dd class="product-details__desc">
             Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода.
           </dd>
         </dl>
-        <form class="add-in-cart-form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Объем:</legend>
-            <ul class="choice-list">
+        <form class="form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="form__fieldset form__fieldset--cart-layout" role="group" aria-labelledby="pseudolegend">
+            <div class="form__legend form__legend--fontset form__legend--cart-layout" id="pseudolegend">Объем:</div>
+            <ul class="choice-list choice-list--cart-layout">
               <li class="choice-list__item">
-                <label class="" for="50ml">50ml</label>
-                <input type="radio" name="volume" id="50ml" value="50ml">
+                <input class="input page__a11y-hidden" type="radio" name="volume" id="50ml" value="50ml">
+                <label class="label label--fontset" for="50ml">50ml</label>
               </li>
               <li class="choice-list__item">
-                <label for="30ml">30ml</label>
-                <input type="radio" name="volume" id="30ml" value="30ml">
+                <input class="input page__a11y-hidden" type="radio" name="volume" id="30ml" value="30ml">
+                <label class="label label--fontset" for="30ml">30ml</label>
               </li>
             </ul>
-          </fieldset>
-          <button class="button" type="submit">Добавить в корзину</button>
+          </div>
+          <div class="form__price">
+            <p class="cart__price">890 &#8381;</p>
+            <button class="button" type="submit">Добавить в корзину</button>
+          </div>
         </form>
       </div>
       <div class="cart__pic">
@@ -158,7 +177,7 @@
               <table class="determination">
                 <tr class="determination__row determination__row--title">
                   <td><h3 class="product__title">Lotos</h3></td>
-                  <td>890</td>
+                  <td>890 &#8381;</td>
                 </tr>
                 <tr class="determination__row">
                   <td><p class="product__description">маска для лица</p></td>
@@ -171,12 +190,22 @@
       </ul>
       <div class="pagination">
         <div class="pages">
-          <a class="page" href="#">1</a>
-          <a class="page" href="#">3</a>
+          <a class="pages__page pages__page--current" href="#">1</a>
+          <a class="pages__page pages__page--last" href="#">3</a>
         </div>
         <div class="flipping-page">
-          <a class="flip flip--prev" href="#"><span>Листнуть назад</span></a>
-          <a class="flip flip--next" href="#"><span>Листнуть вперёд</span></a>
+          <a class="flipping-page__flip flipping-page__flip--prev" href="#">
+            <span class="page__a11y-hidden">Листнуть назад</span>
+            <svg width="26" height="12">
+              <use xlink:href="img/stack.svg#arrow-left"></use>
+            </svg>
+          </a>
+          <a class="flipping-page__flip flipping-page__flip--next" href="#">
+            <span class="page__a11y-hidden">Листнуть вперёд</span>
+            <svg width="26" height="12">
+              <use xlink:href="img/stack.svg#arrow-right"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </section>

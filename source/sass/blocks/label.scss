@@ -1,0 +1,46 @@
+.label {
+  font-family: var(--mplus), "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  color: var(--dark-blue, #122947);
+  display: flex;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 26px;
+
+  &--fontset {
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    min-width: 16px;
+    min-height: 16px;
+    border: 1px solid var(--grey-6, #cdcdcd);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    top: 4px;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    min-width: 16px;
+    min-height: 16px;
+    background-color: var(--dark-blue, #122947);
+    mask-image: url("../../img/stack.svg#radio-checked");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px 16px;
+    top: 4px;
+    left: 0;
+  }
+}

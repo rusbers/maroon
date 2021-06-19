@@ -26,3 +26,19 @@
   text-decoration: none;
   color: inherit;
 }
+
+.page-footer__copy span {
+  display: inline-flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background-color: var(--grey-6, #cdcdcd);
+    mask-image: url("../../img/stack.svg#copy");
+    mask-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,10 @@
+.input {
+
+  &:checked + .label::after {
+    display: block;
+  }
+
+  &:disabled + .label {
+    color: var(--grey, #9a9da0);
+  }
+}
