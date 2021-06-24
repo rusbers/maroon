@@ -5,6 +5,27 @@
   font-size: 26px;
   line-height: 130%;
   font-weight: 500;
+
+  @media (min-width: 708px) {
+    font-size: 32px;
+    line-height: 125%;
+  }
+
+  @media (min-width: 1200px) {
+    font-family: var(--mplus), "Tahoma", sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    display: flex;
+  }
+}
+
+.nav-list__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .nav-list__link {

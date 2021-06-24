@@ -1,8 +1,17 @@
 .logo {
   padding: 0 10px;
+
+  @media(min-width: 1200px) {
+    padding-left: 0;
+  }
 }
 
 .logo img {
   width: 85px;
   height: 13px;
+
+  @media (min-width: 708px) {
+    width: 131px;
+    height: 21px;
+  }
 }

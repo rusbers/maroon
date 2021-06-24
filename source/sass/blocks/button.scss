@@ -8,6 +8,19 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  min-height: 40px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 28px 16px;
+  border: 1px solid var(--grey-7, #b3bac1);
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  @media(min-width: 708px) {
+    font-size: 16px;
+  }
 }
 
 .button__text {

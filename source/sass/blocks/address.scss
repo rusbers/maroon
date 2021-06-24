@@ -1,5 +1,25 @@
+.address {
+  position: relative;
+}
+
 .address__contacts {
   background-color: var(--bg-grey, #f4f1ed);
+
+  @media (min-width: 708px) {
+    padding-top: 60px;
+    padding-right: 362px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 100px;
+    padding-right: 314px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    box-sizing: border-box;
+    width: 50%;
+  }
 }
 
 .address__map {
@@ -8,9 +28,15 @@
 
   @media (min-width: 708px) {
     min-height: 374px;
+    width: 369px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
   }
 
   @media (min-width: 1200px) {
     min-height: 422px;
+    width: 670px;
   }
 }

@@ -5,6 +5,12 @@
   width: 35%;
   justify-content: flex-end;
   flex-wrap: wrap;
+
+  @media(min-width: 1200px) {
+    width: auto;
+    position: absolute;
+    right: 15px;
+  }
 }
 
 .user-menu__item {
@@ -12,5 +18,23 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.user-menu__item svg {
+  width: 14px;
+  height: 16px;
+
+  &:first-child {
+    width: 13px;
+  }
+
+  @media (min-width: 708px) {
+    width: 18px;
+    height: 21px;
+
+    &:first-child {
+      widows: 16px;
+    }
   }
 }

@@ -6,6 +6,11 @@
   &--size {
     width: 220px;
     min-height: 297px;
+
+    @media(min-width: 708px) {
+      width: 230px;
+      min-height: 312px;
+    }
   }
 
   &--layout {

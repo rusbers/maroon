@@ -2,6 +2,11 @@
   position: relative;
   padding-top: 296px;
 
+  @media(min-width: 708px) {
+    padding-top: 97px;
+    padding-bottom: 97px;
+  }
+
   &::before {
     content: "";
     width: 100%;
@@ -33,5 +38,17 @@
         background-image: url("../../img/background/novelty-big@2x.jpg");
       }
     }
+  }
+}
+
+.novelty__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 708px) {
+    align-items: flex-start;
+    width: 50%;
+    margin-left: auto;
   }
 }

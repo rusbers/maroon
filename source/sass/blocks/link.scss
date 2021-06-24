@@ -8,4 +8,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 708px) {
+    font-size: 16px;
+  }
+}
+
+.link svg {
+  width: 23px;
+  height: 10px;
+
+  @media (min-width: 708px) {
+    width: 26px;
+    height: 12px;
+  }
 }

@@ -13,13 +13,10 @@
 
   <header class="page-header">
     <div class="page-header__inner">
-      <div class="page-header__top">
+      <div class="page-header__top"> <!-- page-header__top--transparent -->
         <div class="page__container page-header__top-inner">
           <a class="logo">
-            <picture>
-              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
-              <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
-            </picture>
+            <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
           </a>
           <ul class="page-header__user-menu user-menu">
             <li class="user-menu__item">
@@ -58,32 +55,34 @@
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="page__social-media social-media">
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">facebook</span>
-              <svg width="11" height="20">
-                <use xlink:href="img/stack.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">instagram</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">twitter</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="page-header__social-media">
+          <ul class="social-media">
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">facebook</span>
+                <svg width="11" height="20">
+                  <use xlink:href="img/stack.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">instagram</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">twitter</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -95,11 +94,11 @@
     <section class="promo">
       <div class="page__container">
         <div class="promo__text">
-          <p class="title title--accent">Maroon</p>
+          <p class="promo__title title title--accent">Maroon</p>
           <div class="text">
             <h2>Натуральная косметика для бережного ухода за кожей</h2>
           </div>
-          <a class="button" href="#">Подробнее</a>
+          <a class="promo__button button" href="#">Подробнее</a>
         </div>
         <ul class="page__promo-list promo-list">
           <li class="promo-list__item">
@@ -138,87 +137,90 @@
       </div>
     </section>
 
-    <section class="bestsellers bestsellers__container">
-      <div class="bestsellers__text">
-        <h2 class="title title--line_height">Бестселлеры</h2>
-        <div class="text">
-          <p>Легендарные продукты, завоевавшие любовь наших клиентов</p>
+    <section class="page__bestseller bestsellers">
+      <div class="page__container bestsellers__inner">
+        <div class="bestsellers__text">
+          <h2 class="title title--line_height">Бестселлеры</h2>
+          <div class="text">
+            <p>Легендарные продукты, завоевавшие любовь наших клиентов</p>
+          </div>
+          <a class="bestsellers__button button" href="#">Смотреть все</a>
+        </div>
+        <div class="bestsellers__items">
+          <ul class="page__bestsellers-list bestsellers-list">
+            <li class="bestsellers-list__item">
+              <article class="product product--size product--layout">
+                <picture>
+                  <source type="image/webp" srcset="img/content/bestsellers/best-high@1x.webp 1x, img/content/bestsellers/best-high@2x.webp 2x">
+                  <img class="img img--absolute" src="img/content/bestsellers/best-high@1x.jpg" srcset="img/content/bestsellers/best-high@2x.jpg 2x" width="220" height="297" alt="lorem">
+                </picture>
+                <h3 class="product__title">High</h3>
+                <p class="product__description">Крем для лица</p>
+                <a class="product__link" href="#">Подробнее</a>
+              </article>
+            </li>
+            <li class="bestsellers-list__item">
+              <article class="product product--size product--layout">
+                <picture>
+                  <source type="image/webp" srcset="img/content/bestsellers/best-rest@1x.webp 1x, img/content/bestsellers/best-rest@2x.webp 2x">
+                  <img class="img img--absolute" src="img/content/bestsellers/best-rest@1x.jpg" srcset="img/content/bestsellers/best-rest@2x.jpg 2x" width="220" height="297" alt="lorem">
+                </picture>
+                <h3 class="product__title">Rest</h3>
+                <p class="product__description">Минеральная пудра</p>
+                <a class="product__link" href="#">Подробнее</a>
+              </article>
+            </li>
+            <li class="bestsellers-list__item">
+              <article class="product product--size product--layout">
+                <picture>
+                  <source type="image/webp" srcset="img/content/bestsellers/best-rose@1x.webp 1x, img/content/bestsellers/best-rose@2x.webp 2x">
+                  <img class="img img--absolute" src="img/content/bestsellers/best-rose@1x.jpg" srcset="img/content/bestsellers/best-rose@2x.jpg 2x" width="220" height="297" alt="lorem">
+                </picture>
+                <h3 class="product__title">Rose</h3>
+                <p class="product__description">Крем для лица</p>
+                <a class="product__link" href="cart.html">Подробнее</a>
+              </article>
+            </li>
+            <li class="bestsellers-list__item">
+              <article class="product product--size product--layout">
+                <picture>
+                  <source type="image/webp" srcset="img/content/bestsellers/best-milk@1x.webp 1x, img/content/bestsellers/best-milk@2x.webp 2x">
+                  <img class="img img--absolute" src="img/content/bestsellers/best-milk@1x.jpg" srcset="img/content/bestsellers/best-milk@2x.jpg 2x" width="220" height="297" alt="lorem">
+                </picture>
+                <h3 class="product__title">Milk</h3>
+                <p class="product__description">Масло для тела</p>
+                <a class="product__link" href="#">Подробнее</a>
+              </article>
+            </li>
+          </ul>
+          <div class="bestsellers-list__flipping-page flipping-page">
+            <a class="flipping-page__flip flipping-page__flip--prev" href="#">
+              <span class="page__a11y-hidden">Листнуть назад</span>
+              <svg width="26" height="12">
+                <use xlink:href="img/stack.svg#arrow-left"></use>
+              </svg>
+            </a>
+            <a class="flipping-page__flip flipping-page__flip--next" href="#">
+              <span class="page__a11y-hidden">Листнуть вперёд</span>
+              <svg width="26" height="12">
+                <use xlink:href="img/stack.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="bestsellers__items">
-        <ul class="page__bestsellers-list bestsellers-list">
-          <li class="bestsellers-list__item">
-            <article class="product product--size product--layout">
-              <picture>
-                <source type="image/webp" srcset="img/content/bestsellers/best-high@1x.webp 1x, img/content/bestsellers/best-high@2x.webp 2x">
-                <img class="img img--absolute" src="img/content/bestsellers/best-high@1x.jpg" srcset="img/content/bestsellers/best-high@2x.jpg 2x" width="220" height="297" alt="lorem">
-              </picture>
-              <h3 class="product__title">High</h3>
-              <p class="product__description">Крем для лица</p>
-              <a class="product__link" href="#">Подробнее</a>
-            </article>
-          </li>
-          <li class="bestsellers-list__item">
-            <article class="product product--size product--layout">
-              <picture>
-                <source type="image/webp" srcset="img/content/bestsellers/best-rest@1x.webp 1x, img/content/bestsellers/best-rest@2x.webp 2x">
-                <img class="img img--absolute" src="img/content/bestsellers/best-rest@1x.jpg" srcset="img/content/bestsellers/best-rest@2x.jpg 2x" width="220" height="297" alt="lorem">
-              </picture>
-              <h3 class="product__title">Rest</h3>
-              <p class="product__description">Минеральная пудра</p>
-              <a class="product__link" href="#">Подробнее</a>
-            </article>
-          </li>
-          <li class="bestsellers-list__item">
-            <article class="product product--size product--layout">
-              <picture>
-                <source type="image/webp" srcset="img/content/bestsellers/best-rose@1x.webp 1x, img/content/bestsellers/best-rose@2x.webp 2x">
-                <img class="img img--absolute" src="img/content/bestsellers/best-rose@1x.jpg" srcset="img/content/bestsellers/best-rose@2x.jpg 2x" width="220" height="297" alt="lorem">
-              </picture>
-              <h3 class="product__title">Rose</h3>
-              <p class="product__description">Крем для лица</p>
-              <a class="product__link" href="#">Подробнее</a>
-            </article>
-          </li>
-          <li class="bestsellers-list__item">
-            <article class="product product--size product--layout">
-              <picture>
-                <source type="image/webp" srcset="img/content/bestsellers/best-milk@1x.webp 1x, img/content/bestsellers/best-milk@2x.webp 2x">
-                <img class="img img--absolute" src="img/content/bestsellers/best-milk@1x.jpg" srcset="img/content/bestsellers/best-milk@2x.jpg 2x" width="220" height="297" alt="lorem">
-              </picture>
-              <h3 class="product__title">Milk</h3>
-              <p class="product__description">Масло для тела</p>
-              <a class="product__link" href="#">Подробнее</a>
-            </article>
-          </li>
-        </ul>
-        <div class="bestsellers-list__flipping-page flipping-page">
-          <a class="flipping-page__flip flipping-page__flip--prev" href="#">
-            <span class="page__a11y-hidden">Листнуть назад</span>
-            <svg width="26" height="12">
-              <use xlink:href="img/stack.svg#arrow-left"></use>
-            </svg>
-          </a>
-          <a class="flipping-page__flip flipping-page__flip--next" href="#">
-            <span class="page__a11y-hidden">Листнуть вперёд</span>
-            <svg width="26" height="12">
-              <use xlink:href="img/stack.svg#arrow-right"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <a class="button" href="#">Смотреть все</a>
     </section>
 
     <section class="novelty">
       <div class="page__container">
         <h2 class="page__a11y-hidden">Новинки сезона</h2>
-        <p class="title">Встречайте весну вместе с нами</p>
-        <div class="text">
-          <p class="text--hidden_mob">Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество</p>
-          <p>Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой</p>
+        <div class="novelty__inner">
+          <p class="title">Встречайте весну вместе с нами</p>
+          <div class="text">
+            <p>Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой</p>
+          </div>
+          <a class="button" href="#">Подробнее</a>
         </div>
-        <a class="button" href="#">Подробнее</a>
       </div>
     </section>
 
@@ -226,7 +228,8 @@
       <div class="care-program__inner">
         <h2 class="page__a11y-hidden">Подобрать индивидуальную программу для ухода</h2>
         <p class="title">Индивидуальный уход</p>
-        <div class="text">
+        <div class="care-program__text text">
+          <p class="text--hidden_mob">Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество</p>
           <p>Заполните анкету, и мы подберем уход, подходящий именно вам, учитывая ваш образ жизни, место жительства и другие факторы.</p>
         </div>
         <a class="button" href="#">Заполнить анкету</a>
@@ -236,10 +239,12 @@
     <section class="about-us">
       <div class="page__container">
         <h2 class="page__a11y-hidden">О нас</h2>
-        <div class="quote">
-          <q>Мы стремимся сделать уход за кожей доступным и приятным ритуалом для всех, кто хочет заботиться о себе и своем теле</q>
+        <div class="about-us__inner">
+          <div class="about-us__quote quote">
+            <q>Мы стремимся сделать уход за кожей доступным и приятным ритуалом для всех, кто хочет заботиться о себе и своем теле</q>
+          </div>
+          <a class="button" href="#">Наша история</a>
         </div>
-        <a class="button" href="#">Наша история</a>
       </div>
     </section>
 
@@ -336,44 +341,46 @@
   <footer class="page-footer">
     <div class="page-footer__nav">
       <div class="page__container">
-        <a class="page-footer__logo logo">
-          <picture>
-            <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
-            <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
-          </picture>
-        </a>
-        <ul class="page-footer__footer-nav footer-nav">
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Каталог</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
-        </ul>
-        <ul class="page__social-media social-media">
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">facebook</span>
-              <svg width="11" height="20">
-                <use xlink:href="img/stack.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">instagram</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">twitter</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="page-footer__nav-inner">
+          <a class="page-footer__logo logo">
+            <picture>
+              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
+              <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
+            </picture>
+          </a>
+          <ul class="page-footer__footer-nav footer-nav">
+            <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+          </ul>
+          <ul class="page-footer__social-media social-media">
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">facebook</span>
+                <svg width="11" height="20">
+                  <use xlink:href="img/stack.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">instagram</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">twitter</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="page__container page-footer__copy">

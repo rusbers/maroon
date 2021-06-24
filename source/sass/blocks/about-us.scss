@@ -20,6 +20,7 @@
 
     @media (min-width: 708px) {
       background-image: url("../../img/background/about-us-medium@1x.jpg");
+      background-position: bottom;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/background/about-us-medium@2x.jpg");
@@ -34,4 +35,15 @@
       }
     }
   }
+}
+
+.about-us__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px;
+}
+
+.about-us__quote {
+  margin-bottom: 30px;
 }

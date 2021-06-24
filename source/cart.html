@@ -12,13 +12,10 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__inner">
-      <div class="page-header__top">
+      <div class="page-header__top"> <!-- page-header__top--transparent -->
         <div class="page__container page-header__top-inner">
           <a class="logo" href="index.html">
-            <picture>
-              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
-              <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
-            </picture>
+            <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
           </a>
           <ul class="page-header__user-menu user-menu">
             <li class="user-menu__item">
@@ -57,32 +54,34 @@
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="page__social-media social-media">
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">facebook</span>
-              <svg width="11" height="20">
-                <use xlink:href="img/stack.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">instagram</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">twitter</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="page-header__social-media">
+          <ul class="social-media">
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">facebook</span>
+                <svg width="11" height="20">
+                  <use xlink:href="img/stack.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">instagram</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">twitter</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -214,44 +213,46 @@
   <footer class="page-footer">
     <div class="page-footer__nav">
       <div class="page__container">
-        <a class="page-footer__logo logo" href="index.html">
-          <picture>
-            <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
-            <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
-          </picture>
-        </a>
-        <ul class="page-footer__footer-nav footer-nav">
-          <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
-        </ul>
-        <ul class="page__social-media social-media">
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">facebook</span>
-              <svg width="11" height="20">
-                <use xlink:href="img/stack.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">instagram</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">twitter</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="page-footer__nav-inner">
+          <a class="page-footer__logo logo" href="index.html">
+            <picture>
+              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
+              <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
+            </picture>
+          </a>
+          <ul class="page-footer__footer-nav footer-nav">
+            <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+          </ul>
+          <ul class="page-footer__social-media social-media">
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">facebook</span>
+                <svg width="11" height="20">
+                  <use xlink:href="img/stack.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">instagram</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">twitter</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="page__container page-footer__copy">

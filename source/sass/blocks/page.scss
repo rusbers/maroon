@@ -19,7 +19,7 @@
   padding: 0 15px;
 
   @media (min-width: 1200px) {
-    width: 100%;
+    // width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -27,6 +27,10 @@
   &--bestsellers {
     overflow: hidden;
   }
+}
+
+.page__bestsellers {
+  margin-bottom: 80px;
 }
 
 .page__a11y-hidden {
