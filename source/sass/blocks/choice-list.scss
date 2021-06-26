@@ -10,4 +10,14 @@
 .choice-list__item {
   display: flex;
   align-items: center;
+
+  @media (min-width: 708px) {
+    padding-bottom: 12px;
+  }
+
+  &--cart {
+    @media (min-width: 708px) {
+      padding-bottom: 0;
+    }
+  }
 }

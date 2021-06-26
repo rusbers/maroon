@@ -4,4 +4,23 @@
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+
+  @media (min-width: 708px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+.goods-list__item {
+  @media (min-width: 708px) {
+    width: 324px;
+    min-height: 350px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 270px;
+    min-height: 350px;
+  }
 }

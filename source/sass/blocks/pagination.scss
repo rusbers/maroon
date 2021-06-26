@@ -1,4 +1,12 @@
 .pagination {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 708px) {
+    &::before {
+      content: "";
+      width: 35%;
+      height: 1px;
+    }
+  }
 }

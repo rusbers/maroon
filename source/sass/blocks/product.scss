@@ -24,6 +24,16 @@
   & picture {
     display: flex;
   }
+
+  @media (min-width: 708px) {
+    width: 324px;
+    min-height: 350px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 270px;
+    min-height: 350px;
+  }
 }
 
 .product__title {
