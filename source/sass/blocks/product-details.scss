@@ -5,6 +5,10 @@
   font-weight: 400;
   color: var(--dark-blue, #122947);
   border-bottom: 1px solid var(--grey-7, #b3bac1);
+
+  @media (min-width: 708px) {
+    font-size: 16px;
+  }
 }
 
 .product-details__title {
@@ -13,6 +17,10 @@
   font-size: 16px;
   font-weight: 500;
   border-top: 1px solid var(--grey-7, #b3bac1);
+
+  @media (min-width: 708px) {
+    font-size: 18px;
+  }
 }
 
 .product-details__desc {
@@ -21,4 +29,5 @@
 
 .product-details__expand {
   position: static;
+  display: block;
 }

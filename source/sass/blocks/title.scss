@@ -10,6 +10,12 @@
     word-break: break-all;
   }
 
+  @media (min-width: 708px) {
+    font-size: 32px;
+    line-height: 130%;
+    text-align: start;
+  }
+
   &--line_height {
     line-height: 130%;
   }
@@ -18,5 +24,9 @@
     font-size: 42px;
     line-height: normal;
     text-transform: uppercase;
+
+    @media(min-width: 708px) {
+      font-size: 54px;
+    }
   }
 }

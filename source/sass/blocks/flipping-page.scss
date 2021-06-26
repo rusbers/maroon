@@ -1,5 +1,12 @@
 .flipping-page {
   display: flex;
+
+  &--width {
+    @media (min-width: 708px) {
+      width: 35%;
+      justify-content: flex-end;
+    }
+  }
 }
 
 .flipping-page__flip {

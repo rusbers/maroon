@@ -8,10 +8,31 @@
 
 .page-footer__logo {
   padding: 0;
+
+  @media (min-width: 1200px) {
+    margin-right: 69px;
+  }
 }
 
 .page-footer__nav {
   border-bottom: 1px solid var(--grey-3, #d1d1d1);
+}
+
+.page-footer__nav-inner {
+  @media (min-width: 708px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+}
+
+.page-footer__social-media {
+  @media (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 
 .page-footer__copy {
@@ -20,6 +41,11 @@
   line-height: normal;
   font-weight: 400;
   color: var(--grey-1, #959595);
+
+  @media (min-width: 708px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__copy a {

@@ -1,8 +1,14 @@
 .care-program {
+  @media (min-width: 708px) {
+    position: relative;
+    overflow: hidden;
+  }
+
   &::after {
     content: "";
     display: block;
     margin: 0 auto;
+    margin-top: -60px;
     width: 250px;
     height: 252px;
     background-image: url("../../img/background/care-program-small@1x.jpg");
@@ -17,6 +23,11 @@
       width: 403px;
       height: 398px;
       background-image: url("../../img/background/care-program-medium@1x.jpg");
+      position: absolute;
+      right: -117px;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-top: 0;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/background/care-program-medium@2x.jpg");
@@ -27,10 +38,45 @@
       width: 670px;
       height: 451px;
       background-image: url("../../img/background/care-program-big@1x.jpg");
+      right: 15px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/background/care-program-big@2x.jpg");
       }
     }
+  }
+}
+
+.care-program__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-grey, #f4f1f4);
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 60px;
+  padding-bottom: 110px;
+
+  @media (min-width: 708px) {
+    align-items: flex-start;
+    padding-left: 60px;
+    padding-right: 280px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    padding-right: 241px;
+    position: relative;
+    width: 56%;
+    box-sizing: border-box;
+  }
+}
+
+.care-program__text {
+  @media (min-width: 708px) {
+    text-align: start;
   }
 }

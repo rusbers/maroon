@@ -5,6 +5,10 @@
   position: absolute;
   top: -20px;
   right: 20px;
+
+  @media (min-width: 708px) {
+    display: none;
+  }
 }
 
 .expand__closed {

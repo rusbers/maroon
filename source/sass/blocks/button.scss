@@ -8,8 +8,36 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  min-height: 40px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  border: 1px solid var(--grey-7, #b3bac1);
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  @media(min-width: 708px) {
+    font-size: 16px;
+  }
+
+  &--form_open {
+    border: none;
+    padding: 0;
+  }
 }
 
 .button__text {
   display: none;
+}
+
+.button__icon {
+  width: 14px;
+  height: 14px;
+
+  @media (min-width: 708px) {
+    width: 18px;
+    height: 18px;
+  }
 }

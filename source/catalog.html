@@ -13,13 +13,10 @@
 
   <header class="page-header">
     <div class="page-header__inner">
-      <div class="page-header__top">
+      <div class="page-header__top"> <!-- page-header__top--transparent -->
         <div class="page__container page-header__top-inner">
           <a class="logo" href="index.html">
-            <picture>
-              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
-              <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
-            </picture>
+            <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
           </a>
           <ul class="page-header__user-menu user-menu">
             <li class="user-menu__item">
@@ -58,32 +55,34 @@
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="page__social-media social-media">
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">facebook</span>
-              <svg width="11" height="20">
-                <use xlink:href="img/stack.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">instagram</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">twitter</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="page-header__social-media">
+          <ul class="social-media">
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">facebook</span>
+                <svg width="11" height="20">
+                  <use xlink:href="img/stack.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">instagram</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">twitter</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -102,115 +101,119 @@
     <section class="page__container sorting">
       <h2 class="page__a11y-hidden">Форма сортировки списка товаров</h2>
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Уход для лица</legend>
-          <button class="expand" type="button">
-            <span class="page__a11y-hidden">Развернуть опции</span>
-            <svg class="expand__opened" width="12" height="2">
-              <use xlink:href="img/stack.svg#minus"></use>
-            </svg>
-            <svg class="expand__closed" width="12" height="12">
-              <use xlink:href="img/stack.svg#plus"></use>
-            </svg>
-          </button>
-          <ul class="choice-list">
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="face-creams" name="face-care" value="creams" checked>
-              <label class="label" for="face-creams">Крема</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="face-serums" name="face-care" value="serums" disabled>
-              <label class="label" for="face-serums">Сыворотки</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="face-masks" name="face-care" value="masks">
-              <label class="label" for="face-masks">Маски</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="face-foams" name="face-care" value="foams">
-              <label class="label" for="face-foams">Пенки</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="face-tonics" name="face-care" value="tonics">
-              <label class="label" for="face-tonics">Тоники</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="face-powders" name="face-care" value="powders">
-              <label class="label" for="face-powders">Пудры</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Уход для тела</legend>
-          <button class="expand" type="button">
-            <span class="page__a11y-hidden">Развернуть опции</span>
-            <svg class="expand__opened" width="12" height="2">
-              <use xlink:href="img/stack.svg#minus"></use>
-            </svg>
-            <svg class="expand__closed" width="12" height="12">
-              <use xlink:href="img/stack.svg#plus"></use>
-            </svg>
-          </button>
-          <ul class="choice-list">
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="body-creams" name="body-care" value="creams">
-              <label class="label" for="body-creams">Крема</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="body-oils" name="body-care" value="oils">
-              <label class="label" for="body-oils">Масла</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="body-scrubs" name="body-care" value="scrubs">
-              <label class="label" for="body-scrubs">Скрабы</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="body-soap" name="body-care" value="soap">
-              <label class="label" for="body-soap">Мыло</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="body-bath-bombs" name="body-care" value="bath-bombs">
-              <label class="label" for="body-bath-bombs">Бомбочки для ванны</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="body-bath-salt" name="body-care" value="bath-salt">
-              <label class="label" for="body-bath-salt">Соль для ванны</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Тип кожи</legend>
-          <button class="expand" type="button">
-            <span class="page__a11y-hidden">Развернуть опции</span>
-            <svg class="expand__opened" width="12" height="2">
-              <use xlink:href="img/stack.svg#minus"></use>
-            </svg>
-            <svg class="expand__closed" width="12" height="12">
-              <use xlink:href="img/stack.svg#plus"></use>
-            </svg>
-          </button>
-          <ul class="choice-list">
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="skin-normal" name="skin-type" value="normal">
-              <label class="label" for="skin-normal">Нормальная</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="skin-dry" name="skin-type" value="dry">
-              <label class="label" for="skin-dry">Сухая</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="skin-oily" name="skin-type" value="oily">
-              <label class="label" for="skin-oily">Жирная</label>
-            </li>
-            <li class="choice-list__item">
-              <input class="input page__a11y-hidden" type="radio" id="skin-combined" name="skin-type" value="combined">
-              <label class="label" for="skin-combined">Комбинированная</label>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="form__buttons">
-          <button class="button" type="submit">Применить</button>
-          <button class="button" type="reset">Сбросить</button>
+        <div class="form__inner">
+          <div class="form__fieldsets">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Уход для лица</legend>
+              <button class="expand" type="button">
+                <span class="page__a11y-hidden">Развернуть опции</span>
+                <svg class="expand__opened" width="12" height="2">
+                  <use xlink:href="img/stack.svg#minus"></use>
+                </svg>
+                <svg class="expand__closed" width="12" height="12">
+                  <use xlink:href="img/stack.svg#plus"></use>
+                </svg>
+              </button>
+              <ul class="choice-list">
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="face-creams" name="face-care" value="creams" checked>
+                  <label class="label" for="face-creams">Крема</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="face-serums" name="face-care" value="serums" disabled>
+                  <label class="label" for="face-serums">Сыворотки</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="face-masks" name="face-care" value="masks">
+                  <label class="label" for="face-masks">Маски</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="face-foams" name="face-care" value="foams">
+                  <label class="label" for="face-foams">Пенки</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="face-tonics" name="face-care" value="tonics">
+                  <label class="label" for="face-tonics">Тоники</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="face-powders" name="face-care" value="powders">
+                  <label class="label" for="face-powders">Пудры</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Уход для тела</legend>
+              <button class="expand" type="button">
+                <span class="page__a11y-hidden">Развернуть опции</span>
+                <svg class="expand__opened" width="12" height="2">
+                  <use xlink:href="img/stack.svg#minus"></use>
+                </svg>
+                <svg class="expand__closed" width="12" height="12">
+                  <use xlink:href="img/stack.svg#plus"></use>
+                </svg>
+              </button>
+              <ul class="choice-list">
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="body-creams" name="body-care" value="creams">
+                  <label class="label" for="body-creams">Крема</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="body-oils" name="body-care" value="oils">
+                  <label class="label" for="body-oils">Масла</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="body-scrubs" name="body-care" value="scrubs">
+                  <label class="label" for="body-scrubs">Скрабы</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="body-soap" name="body-care" value="soap">
+                  <label class="label" for="body-soap">Мыло</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="body-bath-bombs" name="body-care" value="bath-bombs">
+                  <label class="label" for="body-bath-bombs">Бомбочки для ванны</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="body-bath-salt" name="body-care" value="bath-salt">
+                  <label class="label" for="body-bath-salt">Соль для ванны</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Тип кожи</legend>
+              <button class="expand" type="button">
+                <span class="page__a11y-hidden">Развернуть опции</span>
+                <svg class="expand__opened" width="12" height="2">
+                  <use xlink:href="img/stack.svg#minus"></use>
+                </svg>
+                <svg class="expand__closed" width="12" height="12">
+                  <use xlink:href="img/stack.svg#plus"></use>
+                </svg>
+              </button>
+              <ul class="choice-list">
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="skin-normal" name="skin-type" value="normal">
+                  <label class="label" for="skin-normal">Нормальная</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="skin-dry" name="skin-type" value="dry">
+                  <label class="label" for="skin-dry">Сухая</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="skin-oily" name="skin-type" value="oily">
+                  <label class="label" for="skin-oily">Жирная</label>
+                </li>
+                <li class="choice-list__item">
+                  <input class="input page__a11y-hidden" type="radio" id="skin-combined" name="skin-type" value="combined">
+                  <label class="label" for="skin-combined">Комбинированная</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="form__buttons">
+            <button class="form__button button" type="submit">Применить</button>
+            <button class="form__button button" type="reset">Сбросить</button>
+          </div>
         </div>
       </form>
     </section>
@@ -272,7 +275,7 @@
           </a>
         </li>
         <li class="goods-list__item">
-          <a class="product-link" href="#">
+          <a class="product-link" href="cart.html">
             <article class="product">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-rose@1x.jpg 1x, img/content/catalog/big-screens/big-rose@2x.jpg 2x">
@@ -538,7 +541,7 @@
           <a class="pages__page pages__page--current" href="#">1</a>
           <a class="pages__page pages__page--last" href="#">8</a>
         </div>
-        <div class="flipping-page">
+        <div class="flipping-page flipping-page--width">
           <a class="flipping-page__flip flipping-page__flip--prev" href="#">
             <span class="page__a11y-hidden">Листнуть назад</span>
             <svg width="26" height="12">
@@ -670,7 +673,7 @@
           <a class="pages__page pages__page--current" href="#">1</a>
           <a class="pages__page pages__page--last" href="#">3</a>
         </div>
-        <div class="flipping-page">
+        <div class="flipping-page flipping-page--width">
           <a class="flipping-page__flip flipping-page__flip--prev" href="#">
             <span class="page__a11y-hidden">Листнуть назад</span>
             <svg width="26" height="12">
@@ -780,44 +783,46 @@
   <footer class="page-footer">
     <div class="page-footer__nav">
       <div class="page__container">
-        <a class="page-footer__logo logo">
-          <picture>
-            <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
-            <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
-          </picture>
-        </a>
-        <ul class="page-footer__footer-nav footer-nav">
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Каталог</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
-        </ul>
-        <ul class="page__social-media social-media">
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">facebook</span>
-              <svg width="11" height="20">
-                <use xlink:href="img/stack.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">instagram</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-media__item">
-            <a class="social-media__link" href="#">
-              <span class="page__a11y-hidden">twitter</span>
-              <svg width="20" height="20">
-                <use xlink:href="img/stack.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="page-footer__nav-inner">
+          <a class="page-footer__logo logo" href="index.html">
+            <picture>
+              <source media="(min-width: 708px)" srcset="img/logo/logo-big.svg">
+              <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
+            </picture>
+          </a>
+          <ul class="page-footer__footer-nav footer-nav">
+            <li class="footer-nav__item"><a class="footer-nav__link">Каталог</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+          </ul>
+          <ul class="page-footer__social-media social-media">
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">facebook</span>
+                <svg width="11" height="20">
+                  <use xlink:href="img/stack.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">instagram</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media__item">
+              <a class="social-media__link" href="#">
+                <span class="page__a11y-hidden">twitter</span>
+                <svg width="20" height="20">
+                  <use xlink:href="img/stack.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="page__container page-footer__copy">
