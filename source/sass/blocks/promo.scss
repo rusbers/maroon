@@ -3,10 +3,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding-top: 82px;
+  padding-top: 76px;
+  padding-bottom: 57px;
 }
 
 .promo__text {
+  margin-top: 20px;
+  margin-bottom: 35px;
+
   @media(min-width: 708px) {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,11 @@
     left: 50%;
     transform: translate(-50%);
   }
+}
+
+.promo__text .text {
+  margin-top: -8px;
+  margin-bottom: 26px;
 }
 
 .promo__button {

@@ -2,8 +2,15 @@
   position: relative;
 }
 
+.address__title {
+  margin: 0;
+  margin-bottom: 22px;
+  text-align: start;
+}
+
 .address__contacts {
   background-color: var(--bg-grey, #f4f1ed);
+  padding: 53px 30px;
 
   @media (min-width: 708px) {
     padding-top: 60px;
@@ -20,6 +27,11 @@
     box-sizing: border-box;
     width: 50%;
   }
+}
+
+.address__contact-list {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .address__map {

@@ -1,6 +1,7 @@
 .novelty {
   position: relative;
-  padding-top: 296px;
+  padding-top: 288px;
+  padding-bottom: 60px;
 
   @media(min-width: 708px) {
     padding-top: 97px;
@@ -51,4 +52,13 @@
     width: 50%;
     margin-left: auto;
   }
+}
+
+.novelty__title {
+  margin: 0;
+}
+
+.novelty__text {
+  margin-top: -2px;
+  margin-bottom: 8px;
 }

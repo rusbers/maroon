@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    min-height: 290px;
+    min-height: 296px;
   }
 
   & picture {
@@ -55,6 +55,7 @@
   color: var(--grey, #9a9da0);
   text-transform: lowercase;
   margin: 0;
+  margin-bottom: 5px;
 }
 
 .product__link {
@@ -64,6 +65,7 @@
   color: var(--dark-blue, #122947);
   text-decoration: none;
   border-bottom: 1px solid var(--dark-blue, #122947);
-  padding-bottom: 7px;
+  padding-bottom: 2px;
   text-align: center;
+  margin-bottom: 19px;
 }

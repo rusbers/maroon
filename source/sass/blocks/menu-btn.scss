@@ -1,12 +1,16 @@
 .menu-btn {
   position: absolute;
   display: block;
-  top: 0;
+  top: 31px;
   border: 0;
   background-color: transparent;
   width: 14px;
   height: 14px;
   padding: 0;
+
+  @media (min-width: 708px) {
+    top: 41px;
+  }
 
   @media (min-width: 1200px) {
     display: none;

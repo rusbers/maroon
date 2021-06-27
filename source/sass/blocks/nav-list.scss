@@ -2,9 +2,10 @@
   padding: 0;
   list-style: none;
   font-family: var(--raleway), "Arial", sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 130%;
   font-weight: 500;
+  display: none;
 
   @media (min-width: 708px) {
     font-size: 32px;
@@ -22,9 +23,11 @@
 
 .nav-list__item {
   margin-right: 35px;
+  margin-bottom: 19px;
 
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 

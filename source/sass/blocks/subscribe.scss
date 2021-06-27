@@ -1,9 +1,15 @@
 
 .subscribe {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
+  @media (min-width: 708px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.subscribe__title {
+  margin: 0;
 }
 
 .subscribe__text {
@@ -11,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0 25px;
+  margin-bottom: 49px;
 
   @media (min-width: 708px) {
     align-items: flex-start;
@@ -18,6 +25,9 @@
 }
 
 .subscribe__text .text {
+  margin-top: -4px;
+  margin-bottom: 10px;
+
   @media (min-width: 708px) {
     text-align: start;
   }
