@@ -12,7 +12,7 @@
   background-color: var(--bg-grey, #f4f1ed);
   padding: 53px 30px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     padding-top: 60px;
     padding-right: 362px;
     padding-bottom: 60px;
@@ -38,7 +38,7 @@
   position: relative;
   min-height: 281px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     min-height: 374px;
     width: 369px;
     position: absolute;

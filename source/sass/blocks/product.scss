@@ -7,7 +7,7 @@
     width: 220px;
     min-height: 297px;
 
-    @media(min-width: 708px) {
+    @media(min-width: 768px) {
       width: 230px;
       min-height: 312px;
     }
@@ -25,7 +25,7 @@
     display: flex;
   }
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     width: 324px;
     min-height: 350px;
   }

@@ -26,7 +26,7 @@
 .page-footer__nav-inner {
   padding-bottom: 44px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
@@ -52,7 +52,7 @@
   color: var(--grey-1, #959595);
   padding-top: 13px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }

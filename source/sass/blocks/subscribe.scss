@@ -1,6 +1,6 @@
 
 .subscribe {
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -19,7 +19,7 @@
   padding: 0 25px;
   margin-bottom: 49px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     align-items: flex-start;
   }
 }
@@ -28,7 +28,7 @@
   margin-top: -4px;
   margin-bottom: 10px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     text-align: start;
   }
 }
