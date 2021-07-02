@@ -13,12 +13,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 15px;
+  padding: 5px 28px;
   border: 1px solid var(--grey-7, #b3bac1);
   border-radius: 2px;
   box-sizing: border-box;
 
-  @media(min-width: 708px) {
+  @media(min-width: 768px) {
     font-size: 16px;
   }
 
@@ -36,7 +36,7 @@
   width: 14px;
   height: 14px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     width: 18px;
     height: 18px;
   }

@@ -1,12 +1,15 @@
 .menu-btn {
   position: absolute;
-  display: block;
-  top: 0;
+  top: 31px;
   border: 0;
   background-color: transparent;
   width: 14px;
   height: 14px;
   padding: 0;
+
+  @media (min-width: 768px) {
+    top: 41px;
+  }
 
   @media (min-width: 1200px) {
     display: none;
@@ -17,7 +20,7 @@
   width: 14px;
   height: 14px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     width: 18px;
     height: 18px;
   }
@@ -25,11 +28,10 @@
 
 .menu-btn__closed {
   width: 22px;
-  height: 11px;
-  display: none;
+  height: 13px;
 
-  @media (min-width: 708px) {
-    width: 24px;
-    height: 12px;
+  @media (min-width: 768px) {
+    width: 23px;
+    height: 17px;
   }
 }

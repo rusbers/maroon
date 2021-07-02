@@ -8,6 +8,11 @@
   background-color: var(--page-bg, #f8f8f6);
 }
 
+.page__a11y-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 .page__body {
   height: 100%;
   display: flex;
@@ -18,9 +23,14 @@
 .page__container {
   padding: 0 15px;
 
+  @media (min-width: 768px) {
+    padding: 0 45px;
+  }
+
   @media (min-width: 1200px) {
     // width: 100%;
-    max-width: 1200px;
+    padding: 0 15px;
+    max-width: 1170px;
     margin: 0 auto;
   }
 
@@ -29,13 +39,88 @@
   }
 }
 
-.page__bestsellers {
-  margin-bottom: 80px;
+.page__promo {
+  margin-bottom: 72px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 120px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 140px;
+  }
 }
 
-.page__a11y-hidden {
-  position: fixed;
-  transform: scale(0);
+.page__bestsellers {
+  margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 115px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 135px;
+  }
+}
+
+.page__novelty {
+  margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 121px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 140px;
+  }
+}
+
+.page__care-program {
+  margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 121px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 140px;
+  }
+}
+
+.page__about-us {
+  margin-bottom: 73px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 120px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 141px;
+  }
+}
+
+.page__subscribe {
+  margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 120px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 140px;
+  }
+}
+
+.page__address {
+  margin-bottom: 76px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 119px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 141px;
+  }
 }
 
 .page__social-media {

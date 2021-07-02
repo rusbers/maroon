@@ -9,12 +9,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    width: 51%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+    width: auto;
+    max-width: 70%;
+  }
 }
 
 .footer-nav__item {
-  min-width: 90px;
+  @media (max-width: 767.9px) {
+    min-width: 90px;
+  }
+
   margin-right: 9px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+
+  @media (min-width: 1200px) {
+    margin-right: 41px;
+  }
 }
 
 .footer-nav__link {

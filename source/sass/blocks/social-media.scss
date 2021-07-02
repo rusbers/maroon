@@ -7,6 +7,20 @@
 .social-media__item {
   margin-right: 30px;
 
+  @media (min-width: 768px) {
+    margin-right: 25px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-right: 30px;
+  }
+
+  &--margin {
+    @media (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+
   &:last-child {
     margin-right: 0;
   }

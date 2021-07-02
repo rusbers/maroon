@@ -9,17 +9,16 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     font-size: 16px;
   }
 }
 
 .link svg {
   width: 23px;
-  height: 10px;
+  height: 12px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     width: 26px;
-    height: 12px;
   }
 }

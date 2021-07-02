@@ -5,38 +5,69 @@
 .bestsellers__inner {
   padding-bottom: 80px;
 
-  @media(max-width: 707.9px) {
+  @media(max-width: 767.9px) {
     position: relative;
   }
 
-  @media(min-width: 708px) {
+  @media(min-width: 768px) {
     display: flex;
     justify-content: flex-start;
     position: relative;
+    padding-bottom: 42px;
   }
+}
+
+.bestsellers__title {
+  margin: 0;
 }
 
 .bestsellers__text {
-  @media(min-width: 708px) {
+  margin-bottom: 45px;
+
+  @media(min-width: 768px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-shrink: 0;
     width: 36%;
-    margin-right: 40px;
+    margin-right: 10px;
+    padding-top: 47px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 24.8%;
   }
 }
 
-.bestsellers__container {
-  padding-left: 50px;
-  padding-right: 50px;
+.bestsellers__text .text {
+  width: 21ch;
+  margin: -4px auto 0;
+
+  @media (min-width: 768px) {
+    text-align: start;
+    margin: 0;
+    margin-bottom: 13px;
+  }
+}
+
+.bestsellers__items {
+  padding-left: 35px;
+
+  @media (min-width: 768px) {
+    padding-left: 0;
+  }
 }
 
 .bestsellers__button {
-  @media(max-width: 707.9px) {
+
+  @media(max-width: 767.9px) {
     position: absolute;
     bottom: 0;
     right: 50%;
     transform: translate(50%);
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 23px;
+    padding-left: 23px;
   }
 }

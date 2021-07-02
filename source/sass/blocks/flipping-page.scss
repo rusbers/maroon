@@ -2,10 +2,20 @@
   display: flex;
 
   &--width {
-    @media (min-width: 708px) {
+    @media (min-width: 768px) {
       width: 35%;
       justify-content: flex-end;
     }
+  }
+}
+
+.flipping-page svg {
+  width: 26px;
+  height: 12px;
+
+  @media (min-width: 768px) {
+    width: 31px;
+    height: 13px;
   }
 }
 

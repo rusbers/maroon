@@ -3,9 +3,27 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 1200px) {
+    padding: 0 70px;
+  }
 }
 
 .promo-list__item {
+  width: 45%;
+
+  @media (min-width: 550px) {
+    width: 235px;
+  }
+
+  @media (min-width: 768px) {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.promo-list__item picture {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 7px;
 }

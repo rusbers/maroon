@@ -1,13 +1,23 @@
 .page-footer {
   background-color: var(--bg-grey, #f4f1ed);
+  padding-top: 50px;
+  padding-bottom: 10px;
+
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
 }
 
 .page-footer__footer-nav {
   margin: 0;
+  margin-bottom: 9px;
 }
 
 .page-footer__logo {
   padding: 0;
+  padding-bottom: 18px;
+  display: block;
 
   @media (min-width: 1200px) {
     margin-right: 69px;
@@ -19,9 +29,12 @@
 }
 
 .page-footer__nav-inner {
-  @media (min-width: 708px) {
+  padding-bottom: 44px;
+
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 32px;
   }
 
   @media (min-width: 1200px) {
@@ -30,6 +43,8 @@
 }
 
 .page-footer__social-media {
+  margin: 0;
+
   @media (min-width: 1200px) {
     margin-left: auto;
   }
@@ -41,10 +56,12 @@
   line-height: normal;
   font-weight: 400;
   color: var(--grey-1, #959595);
+  padding-top: 13px;
 
-  @media (min-width: 708px) {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+    padding-top: 7px;
   }
 }
 
