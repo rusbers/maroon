@@ -21,6 +21,14 @@
 
   @media (min-width: 768px) {
     align-items: flex-start;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.subscribe__collage {
+  @media (min-width: 768px) {
+    margin-right: 47px;
   }
 }
 
@@ -30,5 +38,12 @@
 
   @media (min-width: 768px) {
     text-align: start;
+    margin-bottom: 15px;
+  }
+}
+
+.subscribe__button {
+  @media (min-width: 768px) {
+    min-width: 170px;
   }
 }

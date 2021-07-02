@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   z-index: 100;
-  // position: static;
 
   @media (min-width: 1200px) {
     border-bottom: 1px solid var(--grey-5, #dbdce0);
@@ -44,6 +43,11 @@
   padding-top: 30px;
   padding-bottom: 24px;
 
+  @media (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 34px;
+  }
+
   @media (min-width: 1200px) {
     padding-top: 0;
     padding-bottom: 0;
@@ -69,6 +73,11 @@
   margin: 0;
   margin-bottom: 42px;
   margin-top: 32px;
+
+  @media (min-width: 768px) {
+    margin-top: 42px;
+    margin-bottom: 50px;
+  }
 }
 
 .page-header__social-media {
@@ -79,6 +88,10 @@
     width: 100%;
     display: block;
     background-color: var(--grey-4, #f4f4f4);
+
+    @media (min-width: 768px) {
+      height: 120px;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -89,6 +102,10 @@
 .page-header__social-media .social-media {
   margin: 0;
   margin-bottom: 46px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 55px;
+  }
 }
 
 .page-header__bottom {

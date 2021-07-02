@@ -5,6 +5,11 @@
   width: 100%;
   padding-top: 76px;
   padding-bottom: 57px;
+
+  @media (min-width: 768px) {
+    padding-top: 131px;
+    padding-bottom: 68px;
+  }
 }
 
 .promo__text {
@@ -15,17 +20,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33.3%;
+    width: 45%;
     position: absolute;
     right: 50%;
     left: 50%;
     transform: translate(-50%);
+    margin-top: 17px;
   }
 }
 
 .promo__text .text {
   margin-top: -8px;
   margin-bottom: 26px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 
 .promo__button {
@@ -36,6 +46,10 @@
 
 .promo__title {
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 5px;
+  }
 }
 
 .promo__image {

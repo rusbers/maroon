@@ -5,6 +5,10 @@
   font-weight: 500;
   color: var(--dark-blue, #122947);
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
 }
 
 .quote q {

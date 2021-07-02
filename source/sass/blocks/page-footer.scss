@@ -2,6 +2,11 @@
   background-color: var(--bg-grey, #f4f1ed);
   padding-top: 50px;
   padding-bottom: 10px;
+
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
 }
 
 .page-footer__footer-nav {
@@ -29,6 +34,7 @@
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 32px;
   }
 
   @media (min-width: 1200px) {
@@ -55,6 +61,7 @@
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+    padding-top: 7px;
   }
 }
 

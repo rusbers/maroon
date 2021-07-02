@@ -41,30 +41,58 @@
 
 .page__promo {
   margin-bottom: 72px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 120px;
+  }
 }
 
 .page__bestsellers {
   margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 115px;
+  }
 }
 
 .page__novelty {
   margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 121px;
+  }
 }
 
 .page__care-program {
   margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 121px;
+  }
 }
 
 .page__about-us {
   margin-bottom: 73px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 120px;
+  }
 }
 
 .page__subscribe {
   margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 120px;
+  }
 }
 
 .page__address {
   margin-bottom: 76px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 119px;
+  }
 }
 
 .page__social-media {

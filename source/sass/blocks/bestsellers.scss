@@ -13,6 +13,7 @@
     display: flex;
     justify-content: flex-start;
     position: relative;
+    padding-bottom: 42px;
   }
 }
 
@@ -26,20 +27,31 @@
   @media(min-width: 768px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-shrink: 0;
     width: 36%;
-    margin-right: 40px;
+    margin-right: 10px;
+    padding-top: 47px;
   }
 }
 
 .bestsellers__text .text {
   width: 74%;
   margin: -4px auto 0;
+
+  @media (min-width: 768px) {
+    width: 88%;
+    text-align: start;
+    margin: 0;
+    margin-bottom: 13px;
+  }
 }
 
 .bestsellers__items {
   padding-left: 35px;
+
+  @media (min-width: 768px) {
+    padding-left: 0;
+  }
 }
 
 .bestsellers__button {
@@ -49,5 +61,10 @@
     bottom: 0;
     right: 50%;
     transform: translate(50%);
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 23px;
+    padding-left: 23px;
   }
 }

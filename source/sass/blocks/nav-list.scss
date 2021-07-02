@@ -25,6 +25,10 @@
   margin-right: 35px;
   margin-bottom: 19px;
 
+  @media (min-width: 768px) {
+    margin-bottom: 23px;
+  }
+
   &:last-child {
     margin-right: 0;
     margin-bottom: 0;

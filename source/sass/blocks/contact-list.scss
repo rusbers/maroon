@@ -4,10 +4,18 @@
   line-height: 145%;
   font-weight: 400;
   color: var(--dark-blue, #122947);
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .contact-list__title {
   font-weight: 500;
+
+  @media (min-width: 768px) {
+    margin-bottom: 6px;
+  }
 }
 
 .contact-list__info {

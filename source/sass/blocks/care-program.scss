@@ -20,11 +20,11 @@
     }
 
     @media (min-width: 768px) {
-      width: 403px;
-      height: 398px;
+      width: 402px;
+      height: 397px;
       background-image: url("../../img/background/care-program-medium@1x.jpg");
       position: absolute;
-      right: -117px;
+      right: -120px;
       top: 50%;
       transform: translate(0, -50%);
       margin-top: 0;
@@ -49,6 +49,10 @@
 
 .care-program__title {
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 8px;
+  }
 }
 
 .care-program__inner {
@@ -64,7 +68,7 @@
   @media (min-width: 768px) {
     align-items: flex-start;
     padding-left: 60px;
-    padding-right: 280px;
+    padding-right: 275px;
     padding-bottom: 60px;
   }
 
@@ -84,6 +88,7 @@
 
   @media (min-width: 768px) {
     text-align: start;
+    margin-bottom: 18px;
   }
 }
 

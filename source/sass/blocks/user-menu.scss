@@ -16,6 +16,10 @@
 .user-menu__item {
   margin-right: 20px;
 
+  @media (min-width: 768px) {
+    margin-right: 30px;
+  }
+
   &:last-child {
     margin-right: 0;
   }

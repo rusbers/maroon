@@ -9,6 +9,16 @@
   }
 }
 
+.flipping-page svg {
+  width: 26px;
+  height: 12px;
+
+  @media (min-width: 768px) {
+    width: 31px;
+    height: 13px;
+  }
+}
+
 .flipping-page__flip {
   text-decoration: none;
 

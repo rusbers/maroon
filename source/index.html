@@ -38,8 +38,8 @@
           </ul>
         </div>
       </div>
-      <div class="page__container page-header__bottom">
-        <nav class="main-nav">
+      <div class="page-header__bottom">
+        <nav class="page__container main-nav">
           <button class="menu-btn" hidden>
             <span class="page__a11y-hidden">Кнопка меню</span>
             <svg class="menu-btn__opened" width="14" height="14">
@@ -49,39 +49,41 @@
               <use xlink:href="img/stack.svg#to-open"></use>
             </svg>
           </button>
-          <ul class="page-header__nav-list nav-list">
+          <ul class="page__container page-header__nav-list nav-list">
             <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
         <div class="page-header__social-media">
-          <ul class="social-media">
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">facebook</span>
-                <svg width="11" height="20">
-                  <use xlink:href="img/stack.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">instagram</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/stack.svg#insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">twitter</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/stack.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="page__container">
+            <ul class="social-media">
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">facebook</span>
+                  <svg width="11" height="20">
+                    <use xlink:href="img/stack.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">instagram</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="img/stack.svg#insta"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">twitter</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="img/stack.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -95,7 +97,7 @@
       <div class="page__container">
         <div class="promo__text">
           <p class="promo__title title title--accent">Maroon</p>
-          <div class="text">
+          <div class="text text--align">
             <h2>Натуральная косметика для&nbsp;бережного ухода за кожей</h2>
           </div>
           <a class="promo__button button" href="#">Подробнее</a>
@@ -147,52 +149,54 @@
           <a class="bestsellers__button button" href="#">Смотреть все</a>
         </div>
         <div class="bestsellers__items">
-          <ul class="page__bestsellers-list bestsellers-list">
-            <li class="bestsellers-list__item">
-              <article class="product product--size product--layout">
-                <picture>
-                  <source type="image/webp" srcset="img/content/bestsellers/best-high@1x.webp 1x, img/content/bestsellers/best-high@2x.webp 2x">
-                  <img class="img img--absolute" src="img/content/bestsellers/best-high@1x.jpg" srcset="img/content/bestsellers/best-high@2x.jpg 2x" width="220" height="297" alt="lorem">
-                </picture>
-                <h3 class="product__title">High</h3>
-                <p class="product__description">Крем для лица</p>
-                <a class="product__link" href="#">Подробнее</a>
-              </article>
-            </li>
-            <li class="bestsellers-list__item">
-              <article class="product product--size product--layout">
-                <picture>
-                  <source type="image/webp" srcset="img/content/bestsellers/best-rest@1x.webp 1x, img/content/bestsellers/best-rest@2x.webp 2x">
-                  <img class="img img--absolute" src="img/content/bestsellers/best-rest@1x.jpg" srcset="img/content/bestsellers/best-rest@2x.jpg 2x" width="220" height="297" alt="lorem">
-                </picture>
-                <h3 class="product__title">Rest</h3>
-                <p class="product__description">Минеральная пудра</p>
-                <a class="product__link" href="#">Подробнее</a>
-              </article>
-            </li>
-            <li class="bestsellers-list__item">
-              <article class="product product--size product--layout">
-                <picture>
-                  <source type="image/webp" srcset="img/content/bestsellers/best-rose@1x.webp 1x, img/content/bestsellers/best-rose@2x.webp 2x">
-                  <img class="img img--absolute" src="img/content/bestsellers/best-rose@1x.jpg" srcset="img/content/bestsellers/best-rose@2x.jpg 2x" width="220" height="297" alt="lorem">
-                </picture>
-                <h3 class="product__title">Rose</h3>
-                <p class="product__description">Крем для лица</p>
-                <a class="product__link" href="cart.html">Подробнее</a>
-              </article>
-            </li>
-            <li class="bestsellers-list__item">
-              <article class="product product--size product--layout">
-                <picture>
-                  <source type="image/webp" srcset="img/content/bestsellers/best-milk@1x.webp 1x, img/content/bestsellers/best-milk@2x.webp 2x">
-                  <img class="img img--absolute" src="img/content/bestsellers/best-milk@1x.jpg" srcset="img/content/bestsellers/best-milk@2x.jpg 2x" width="220" height="297" alt="lorem">
-                </picture>
-                <h3 class="product__title">Milk</h3>
-                <p class="product__description">Масло для тела</p>
-                <a class="product__link" href="#">Подробнее</a>
-              </article>
-            </li>
-          </ul>
+          <div class="bestsellers__items-wrapper">
+            <ul class="page__bestsellers-list bestsellers-list">
+              <li class="bestsellers-list__item">
+                <article class="product product--size product--layout">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/bestsellers/best-high@1x.webp 1x, img/content/bestsellers/best-high@2x.webp 2x">
+                    <img class="img img--absolute" src="img/content/bestsellers/best-high@1x.jpg" srcset="img/content/bestsellers/best-high@2x.jpg 2x" width="220" height="297" alt="lorem">
+                  </picture>
+                  <h3 class="product__title">High</h3>
+                  <p class="product__description">Крем для лица</p>
+                  <a class="product__link" href="#">Подробнее</a>
+                </article>
+              </li>
+              <li class="bestsellers-list__item">
+                <article class="product product--size product--layout">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/bestsellers/best-rest@1x.webp 1x, img/content/bestsellers/best-rest@2x.webp 2x">
+                    <img class="img img--absolute" src="img/content/bestsellers/best-rest@1x.jpg" srcset="img/content/bestsellers/best-rest@2x.jpg 2x" width="220" height="297" alt="lorem">
+                  </picture>
+                  <h3 class="product__title">Rest</h3>
+                  <p class="product__description">Минеральная пудра</p>
+                  <a class="product__link" href="#">Подробнее</a>
+                </article>
+              </li>
+              <li class="bestsellers-list__item">
+                <article class="product product--size product--layout">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/bestsellers/best-rose@1x.webp 1x, img/content/bestsellers/best-rose@2x.webp 2x">
+                    <img class="img img--absolute" src="img/content/bestsellers/best-rose@1x.jpg" srcset="img/content/bestsellers/best-rose@2x.jpg 2x" width="220" height="297" alt="lorem">
+                  </picture>
+                  <h3 class="product__title">Rose</h3>
+                  <p class="product__description">Крем для лица</p>
+                  <a class="product__link" href="cart.html">Подробнее</a>
+                </article>
+              </li>
+              <li class="bestsellers-list__item">
+                <article class="product product--size product--layout">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/bestsellers/best-milk@1x.webp 1x, img/content/bestsellers/best-milk@2x.webp 2x">
+                    <img class="img img--absolute" src="img/content/bestsellers/best-milk@1x.jpg" srcset="img/content/bestsellers/best-milk@2x.jpg 2x" width="220" height="297" alt="lorem">
+                  </picture>
+                  <h3 class="product__title">Milk</h3>
+                  <p class="product__description">Масло для тела</p>
+                  <a class="product__link" href="#">Подробнее</a>
+                </article>
+              </li>
+            </ul>
+          </div>
           <div class="bestsellers-list__flipping-page flipping-page">
             <a class="flipping-page__flip flipping-page__flip--prev" href="#">
               <span class="page__a11y-hidden">Листнуть назад</span>
@@ -255,7 +259,7 @@
         <div class="text">
           <p>Подпишитесь на наш аккаунт <a href="#">@marooncare</a> и узнавайте о новиках и акциях первыми</p>
         </div>
-        <a class="button" href="#">Подписаться</a>
+        <a class="subscribe__button button" href="#">Подписаться</a>
       </div>
       <div class="subscribe__collage collage">
         <picture>
@@ -297,7 +301,7 @@
           <dd class="contact-list__info"><a href="mailto:info@maroon.ru">info@maroon.ru</a></dd>
         </dl>
         <ul class="page__social-media social-media">
-          <li class="social-media__item">
+          <li class="social-media__item social-media__item--margin">
             <a class="social-media__link" href="#">
               <span class="page__a11y-hidden">facebook</span>
               <svg width="11" height="20">
@@ -305,7 +309,7 @@
               </svg>
             </a>
           </li>
-          <li class="social-media__item">
+          <li class="social-media__item social-media__item--margin">
             <a class="social-media__link" href="#">
               <span class="page__a11y-hidden">instagram</span>
               <svg width="20" height="20">
@@ -313,7 +317,7 @@
               </svg>
             </a>
           </li>
-          <li class="social-media__item">
+          <li class="social-media__item social-media__item--margin">
             <a class="social-media__link" href="#">
               <span class="page__a11y-hidden">twitter</span>
               <svg width="20" height="20">

@@ -18,5 +18,14 @@
   @media (min-width: 768px) {
     font-size: 18px;
     line-height: 145%;
+    text-align: start;
+  }
+}
+
+.text {
+  &--align h2 {
+    @media (min-width: 768px) {
+      text-align: center;
+    }
   }
 }
