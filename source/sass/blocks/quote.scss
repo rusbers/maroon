@@ -9,6 +9,10 @@
   @media (min-width: 768px) {
     font-size: 32px;
   }
+
+  @media (min-width: 1200px) {
+    width: 40ch;
+  }
 }
 
 .quote q {

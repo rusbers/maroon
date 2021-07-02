@@ -21,4 +21,8 @@
     right: 42px;
     bottom: 0;
   }
+
+  @media (min-width: 1200px) {
+    right: 11px;
+  }
 }

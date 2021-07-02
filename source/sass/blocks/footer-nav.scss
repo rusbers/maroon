@@ -15,6 +15,12 @@
     width: 51%;
     justify-content: space-between;
   }
+
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+    width: auto;
+    max-width: 70%;
+  }
 }
 
 .footer-nav__item {
@@ -24,6 +30,10 @@
 
   margin-right: 9px;
   margin-bottom: 15px;
+
+  @media (min-width: 1200px) {
+    margin-right: 41px;
+  }
 }
 
 .footer-nav__link {

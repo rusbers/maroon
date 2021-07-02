@@ -24,16 +24,16 @@
   @media (min-width: 768px) {
     width: 18px;
     height: 18px;
+    display: none;
   }
 }
 
 .menu-btn__closed {
   width: 22px;
-  height: 11px;
-  display: none;
+  height: 13px;
 
   @media (min-width: 768px) {
-    width: 24px;
-    height: 12px;
+    width: 23px;
+    height: 17px;
   }
 }

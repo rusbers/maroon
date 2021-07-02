@@ -32,14 +32,17 @@
     margin-right: 10px;
     padding-top: 47px;
   }
+
+  @media (min-width: 1200px) {
+    width: 24.8%;
+  }
 }
 
 .bestsellers__text .text {
-  width: 74%;
+  width: 21ch;
   margin: -4px auto 0;
 
   @media (min-width: 768px) {
-    width: 88%;
     text-align: start;
     margin: 0;
     margin-bottom: 13px;

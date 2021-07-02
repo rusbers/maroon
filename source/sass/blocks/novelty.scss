@@ -8,6 +8,11 @@
     padding-bottom: 97px;
   }
 
+  @media (min-width: 1200px) {
+    padding-top: 70px;
+    padding-bottom: 81px;
+  }
+
   &::before {
     content: "";
     width: 100%;
@@ -52,13 +57,19 @@
     width: 48%;
     margin-left: auto;
   }
+
+  @media (min-width: 1200px) {
+    width: 40%;
+  }
 }
 
 .novelty__title {
   margin: 0;
+  width: 15ch;
 }
 
 .novelty__text {
+  width: 30ch;
   margin-top: -2px;
   margin-bottom: 8px;
 

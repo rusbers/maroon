@@ -18,6 +18,7 @@
     line-height: normal;
     font-weight: 400;
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -27,6 +28,10 @@
 
   @media (min-width: 768px) {
     margin-bottom: 23px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
   }
 
   &:last-child {

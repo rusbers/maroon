@@ -3,8 +3,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding-top: 76px;
   padding-bottom: 57px;
+  padding-top: 76px;
 
   @media (min-width: 768px) {
     padding-top: 131px;
@@ -27,11 +27,15 @@
     transform: translate(-50%);
     margin-top: 17px;
   }
+
+  @media (min-width: 1200px) {
+    margin-top: 47px;
+  }
 }
 
 .promo__text .text {
-  margin-top: -8px;
-  margin-bottom: 26px;
+  width: 30ch;
+  margin: -8px auto 26px;
 
   @media (min-width: 768px) {
     margin-bottom: 20px;
@@ -54,8 +58,8 @@
 
 .promo__image {
   max-width: 100%;
-  width: 130px;
-  height: 170px;
+  width: 100%;
+  height: auto;
 
   @media (min-width: 768px) {
     width: 245px;
