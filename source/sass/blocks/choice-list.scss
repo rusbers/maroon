@@ -1,6 +1,13 @@
 .choice-list {
   list-style: none;
   padding: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--grey-5, #dbdce0);
+
+  @media (min-width: 768px) {
+    border-top: none;
+    padding: 0;
+  }
 
   &--cart-layout {
     display: flex;
@@ -10,10 +17,19 @@
 .choice-list__item {
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
 
-  @media (min-width: 768px) {
-    padding-bottom: 12px;
+  @media (min-width: 1200px) {
+    margin-bottom: 11px;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // @media (min-width: 768px) {
+  //   padding-bottom: 12px;
+  // }
 
   &--cart {
     @media (min-width: 768px) {

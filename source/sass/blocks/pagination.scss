@@ -10,3 +10,11 @@
     }
   }
 }
+
+.pagination__flipping-page {
+  @media (min-width: 768px) {
+    margin-top: 3px;
+    margin-right: -3px;
+    margin-left: 3px;
+  }
+}

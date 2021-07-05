@@ -134,3 +134,27 @@
 .page__bestsellers-list {
   margin: 0;
 }
+
+.page__catalog {
+  margin-bottom: 67px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 104px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 125px;
+  }
+}
+
+.page__recently-viewed {
+  margin-bottom: 67px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 114px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 134px;
+  }
+}

@@ -1,0 +1,19 @@
+.catalog {
+  padding-top: 7px;
+
+  @media (min-width: 768px) {
+    padding-top: 15px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 16px;
+  }
+}
+
+.catalog__goods-list {
+  margin: 0;
+  margin-bottom: 31px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 44px;
+  }
+}

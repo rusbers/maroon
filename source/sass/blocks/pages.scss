@@ -6,6 +6,10 @@
   color: var(--dark-blue, #122947);
   display: inline-flex;
   align-items: center;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .pages__page {
@@ -23,6 +27,11 @@
       height: 1px;
       background-color: currentColor;
       margin: 0 8px;
+
+      @media (min-width: 768px) {
+        width: 50px;
+        margin: 0 10px;
+      }
     }
   }
 
