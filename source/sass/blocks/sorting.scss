@@ -1,0 +1,49 @@
+.sorting--position_r {
+  position: relative;
+}
+
+.sorting__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 34px;
+
+  @media (min-width: 768px) {
+    padding-top: 39px;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 39px;
+    margin-bottom: 32px;
+  }
+}
+
+.sorting__title {
+  margin: 0;
+}
+
+.sorting__button {
+  @media (min-width: 768px) {
+    min-width: 140px
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 5px;
+  }
+}
+
+.sorting__button svg {
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+.sorting__form {
+  padding-bottom: 60px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 121px;
+  }
+}

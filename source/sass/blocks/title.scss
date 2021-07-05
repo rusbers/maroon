@@ -33,4 +33,10 @@
       font-size: 58px;
     }
   }
+
+  &--font_size {
+    @media (min-width: 768px) {
+      font-size: 36px;
+    }
+  }
 }

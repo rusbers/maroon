@@ -11,7 +11,7 @@
 
 <body class="page__body">
 
-  <header class="page-header">
+  <header class="page-header"> <!-- page-header--mob-menu -->
     <div class="page-header__inner">
       <div class="page-header__top"> <!-- page-header__top--transparent -->
         <div class="page__container page-header__top-inner">
@@ -38,8 +38,8 @@
           </ul>
         </div>
       </div>
-      <div class="page__container page-header__bottom">
-        <nav class="main-nav">
+      <div class="page-header__bottom" style="display: none;">
+        <nav class="page__container main-nav">
           <button class="menu-btn" hidden>
             <span class="page__a11y-hidden">Кнопка меню</span>
             <svg class="menu-btn__opened" width="14" height="14">
@@ -49,58 +49,65 @@
               <use xlink:href="img/stack.svg#to-open"></use>
             </svg>
           </button>
-          <ul class="page-header__nav-list nav-list">
-            <li class="nav-list__item"><a class="nav-list__link">Каталог</a></li>
+          <ul class="page__container page-header__nav-list nav-list">
+            <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
         <div class="page-header__social-media">
-          <ul class="social-media">
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">facebook</span>
-                <svg width="11" height="20">
-                  <use xlink:href="img/stack.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">instagram</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/stack.svg#insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">twitter</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/stack.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="page__container">
+            <ul class="social-media">
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">facebook</span>
+                  <svg width="11" height="20">
+                    <use xlink:href="img/stack.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">instagram</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="img/stack.svg#insta"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">twitter</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="img/stack.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
   <main class="page-main">
-    <div class="page__container catalog-head">
-      <h1 class="title title--line_height">Каталог</h1>
-      <button class="button button--form_open">
-        <span class="button__text">Фильтр</span>
-        <svg class="button__icon" width="14" height="14">
-          <use xlink:href="img/stack.svg#to-close"></use>
-        </svg>
-      </button> <!-- button--form_close -->
-    </div>
 
-    <section class="page__container sorting">
+    <h1 class="page__a11y-hidden">Каталог</h1>
+
+    <section class="page__container sorting"> <!-- sorting--position_r -->
+
       <h2 class="page__a11y-hidden">Форма сортировки списка товаров</h2>
-      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+
+      <header class="sorting__header">
+        <p class="sorting__title title title--font_size title--line_height">Каталог</p>
+        <button class="sorting__button button  button--form_open"> <!-- button--form_open -->
+          <span class="button__text">Фильтр</span> <!-- style="display: block;" -->
+          <svg class="button__icon" width="14" height="14"> <!-- style="display: none;" -->
+            <use xlink:href="img/stack.svg#to-close"></use>
+          </svg>
+        </button> <!-- button--form_close -->
+      </header>
+
+      <form class="sorting__form form" action="https://echo.htmlacademy.ru" method="POST"> <!-- form--position_a -->
         <div class="form__inner">
           <div class="form__fieldsets">
             <fieldset class="form__fieldset">
@@ -114,29 +121,29 @@
                   <use xlink:href="img/stack.svg#plus"></use>
                 </svg>
               </button>
-              <ul class="choice-list">
+              <ul class="form__choice-list choice-list">
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="face-creams" name="face-care" value="creams" checked>
+                  <input class="input page__a11y-hidden" type="checkbox" id="face-creams" name="face-care" value="creams" checked>
                   <label class="label" for="face-creams">Крема</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="face-serums" name="face-care" value="serums" disabled>
+                  <input class="input page__a11y-hidden" type="checkbox" id="face-serums" name="face-care" value="serums" disabled>
                   <label class="label" for="face-serums">Сыворотки</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="face-masks" name="face-care" value="masks">
+                  <input class="input page__a11y-hidden" type="checkbox" id="face-masks" name="face-care" value="masks">
                   <label class="label" for="face-masks">Маски</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="face-foams" name="face-care" value="foams">
+                  <input class="input page__a11y-hidden" type="checkbox" id="face-foams" name="face-care" value="foams">
                   <label class="label" for="face-foams">Пенки</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="face-tonics" name="face-care" value="tonics">
+                  <input class="input page__a11y-hidden" type="checkbox" id="face-tonics" name="face-care" value="tonics">
                   <label class="label" for="face-tonics">Тоники</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="face-powders" name="face-care" value="powders">
+                  <input class="input page__a11y-hidden" type="checkbox" id="face-powders" name="face-care" value="powders">
                   <label class="label" for="face-powders">Пудры</label>
                 </li>
               </ul>
@@ -152,29 +159,29 @@
                   <use xlink:href="img/stack.svg#plus"></use>
                 </svg>
               </button>
-              <ul class="choice-list">
+              <ul class="form__choice-list choice-list">
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="body-creams" name="body-care" value="creams">
+                  <input class="input page__a11y-hidden" type="checkbox" id="body-creams" name="body-care" value="creams">
                   <label class="label" for="body-creams">Крема</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="body-oils" name="body-care" value="oils">
+                  <input class="input page__a11y-hidden" type="checkbox" id="body-oils" name="body-care" value="oils">
                   <label class="label" for="body-oils">Масла</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="body-scrubs" name="body-care" value="scrubs">
+                  <input class="input page__a11y-hidden" type="checkbox" id="body-scrubs" name="body-care" value="scrubs">
                   <label class="label" for="body-scrubs">Скрабы</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="body-soap" name="body-care" value="soap">
+                  <input class="input page__a11y-hidden" type="checkbox" id="body-soap" name="body-care" value="soap">
                   <label class="label" for="body-soap">Мыло</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="body-bath-bombs" name="body-care" value="bath-bombs">
+                  <input class="input page__a11y-hidden" type="checkbox" id="body-bath-bombs" name="body-care" value="bath-bombs">
                   <label class="label" for="body-bath-bombs">Бомбочки для ванны</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="body-bath-salt" name="body-care" value="bath-salt">
+                  <input class="input page__a11y-hidden" type="checkbox" id="body-bath-salt" name="body-care" value="bath-salt">
                   <label class="label" for="body-bath-salt">Соль для ванны</label>
                 </li>
               </ul>
@@ -190,21 +197,21 @@
                   <use xlink:href="img/stack.svg#plus"></use>
                 </svg>
               </button>
-              <ul class="choice-list">
+              <ul class="form__choice-list choice-list">
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="skin-normal" name="skin-type" value="normal">
+                  <input class="input page__a11y-hidden" type="checkbox" id="skin-normal" name="skin-type" value="normal">
                   <label class="label" for="skin-normal">Нормальная</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="skin-dry" name="skin-type" value="dry">
+                  <input class="input page__a11y-hidden" type="checkbox" id="skin-dry" name="skin-type" value="dry">
                   <label class="label" for="skin-dry">Сухая</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="skin-oily" name="skin-type" value="oily">
+                  <input class="input page__a11y-hidden" type="checkbox" id="skin-oily" name="skin-type" value="oily">
                   <label class="label" for="skin-oily">Жирная</label>
                 </li>
                 <li class="choice-list__item">
-                  <input class="input page__a11y-hidden" type="radio" id="skin-combined" name="skin-type" value="combined">
+                  <input class="input page__a11y-hidden" type="checkbox" id="skin-combined" name="skin-type" value="combined">
                   <label class="label" for="skin-combined">Комбинированная</label>
                 </li>
               </ul>
@@ -218,10 +225,10 @@
       </form>
     </section>
 
-    <section class="page__container catalog">
+    <section class="page__container page__catalog catalog">
       <h2 class="page__a11y-hidden">Список товаров</h2>
 
-      <ul class="goods-list">
+      <ul class="catalog__goods-list goods-list">
         <li class="goods-list__item">
           <a class="product-link" href="#">
             <article class="product">
@@ -240,7 +247,7 @@
                     <td>990 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">крем для лица</p></td>
+                    <td><p class="product__description product__description--margin">крем для лица</p></td>
                     <td>50ml</td>
                   </tr>
                 </tbody>
@@ -266,7 +273,7 @@
                     <td>690 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">минеральная пудра</p></td>
+                    <td><p class="product__description product__description--margin">минеральная пудра</p></td>
                     <td>20g</td>
                   </tr>
                 </tbody>
@@ -292,7 +299,7 @@
                     <td>890 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">крем для лица</p></td>
+                    <td><p class="product__description product__description--margin">крем для лица</p></td>
                     <td>50ml</td>
                   </tr>
                 </tbody>
@@ -318,7 +325,7 @@
                     <td>790 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">масло для тела</p></td>
+                    <td><p class="product__description product__description--margin">масло для тела</p></td>
                     <td>150ml</td>
                   </tr>
                 </tbody>
@@ -344,7 +351,7 @@
                     <td>590 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">минеральная пудра</p></td>
+                    <td><p class="product__description product__description--margin">минеральная пудра</p></td>
                     <td>15g</td>
                   </tr>
                 </tbody>
@@ -370,7 +377,7 @@
                     <td>90 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">бомбочка для ванны</p></td>
+                    <td><p class="product__description product__description--margin">бомбочка для ванны</p></td>
                     <td>20g</td>
                   </tr>
                 </tbody>
@@ -396,7 +403,7 @@
                     <td>890 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">крем для лица</p></td>
+                    <td><p class="product__description product__description--margin">крем для лица</p></td>
                     <td>50ml</td>
                   </tr>
                 </tbody>
@@ -422,7 +429,7 @@
                     <td>490 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">маска для лица</p></td>
+                    <td><p class="product__description product__description--margin">маска для лица</p></td>
                     <td>100g</td>
                   </tr>
                 </tbody>
@@ -448,7 +455,7 @@
                     <td>990 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">масло для тела</p></td>
+                    <td><p class="product__description product__description--margin">масло для тела</p></td>
                     <td>300ml</td>
                   </tr>
                 </tbody>
@@ -474,7 +481,7 @@
                     <td>290 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">мыло ручной работы</p></td>
+                    <td><p class="product__description product__description--margin">мыло ручной работы</p></td>
                     <td>50g</td>
                   </tr>
                 </tbody>
@@ -500,7 +507,7 @@
                     <td>890 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">маска для лица</p></td>
+                    <td><p class="product__description product__description--margin">маска для лица</p></td>
                     <td>50ml</td>
                   </tr>
                 </tbody>
@@ -526,7 +533,7 @@
                     <td>90 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">бомбочка для ванны</p></td>
+                    <td><p class="product__description product__description--margin">бомбочка для ванны</p></td>
                     <td>20g</td>
                   </tr>
                 </tbody>
@@ -541,7 +548,7 @@
           <a class="pages__page pages__page--current" href="#">1</a>
           <a class="pages__page pages__page--last" href="#">8</a>
         </div>
-        <div class="flipping-page flipping-page--width">
+        <div class="pagination__flipping-page flipping-page flipping-page--width">
           <a class="flipping-page__flip flipping-page__flip--prev" href="#">
             <span class="page__a11y-hidden">Листнуть назад</span>
             <svg width="26" height="12">
@@ -558,10 +565,10 @@
       </div>
     </section>
 
-    <section class="page__container recently-viewed">
-      <h2 class="title">Вы недавно смотрели</h2>
+    <section class="page__container page__recently-viewed recently-viewed">
+      <h2 class="recently-viewed__title title">Вы недавно смотрели</h2>
 
-      <ul class="goods-list">
+      <ul class="recently-viewed__goods-list goods-list">
         <li class="goods-list__item">
           <a class="product-link" href="#">
             <article class="product">
@@ -580,7 +587,7 @@
                     <td>490 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">маска для лица</p></td>
+                    <td><p class="product__description product__description--margin">маска для лица</p></td>
                     <td>100g</td>
                   </tr>
                 </tbody>
@@ -606,7 +613,7 @@
                     <td>890 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">маска для лица</p></td>
+                    <td><p class="product__description product__description--margin">маска для лица</p></td>
                     <td>50ml</td>
                   </tr>
                 </tbody>
@@ -632,7 +639,7 @@
                     <td>290 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">мыло ручной работы</p></td>
+                    <td><p class="product__description product__description--margin">мыло ручной работы</p></td>
                     <td>50g</td>
                   </tr>
                 </tbody>
@@ -658,7 +665,7 @@
                     <td>990 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">масло для тела</p></td>
+                    <td><p class="product__description product__description--margin">масло для тела</p></td>
                     <td>300ml</td>
                   </tr>
                 </tbody>
@@ -673,7 +680,7 @@
           <a class="pages__page pages__page--current" href="#">1</a>
           <a class="pages__page pages__page--last" href="#">3</a>
         </div>
-        <div class="flipping-page flipping-page--width">
+        <div class="pagination__flipping-page flipping-page flipping-page--width">
           <a class="flipping-page__flip flipping-page__flip--prev" href="#">
             <span class="page__a11y-hidden">Листнуть назад</span>
             <svg width="26" height="12">
@@ -690,14 +697,14 @@
       </div>
     </section>
 
-    <section class="page__container subscribe">
+    <section class="page__container page__subscribe subscribe">
       <div class="subscribe__text">
         <h2 class="page__a11y-hidden">Подписаться</h2>
-        <p class="title">Присоединяйтесь к нам</p>
+        <p class="subscribe__title title">Присоединяйтесь к нам</p>
         <div class="text">
           <p>Подпишитесь на наш аккаунт <a href="#">@marooncare</a> и узнавайте о новиках и акциях первыми</p>
         </div>
-        <a class="button" href="#">Подписаться</a>
+        <a class="subscribe__button button" href="#">Подписаться</a>
       </div>
       <div class="subscribe__collage collage">
         <picture>
@@ -727,19 +734,19 @@
       </div>
     </section>
 
-    <section class="page__container address">
+    <section class="page__container page__address address">
       <div class="address__contacts">
-        <h2 class="title">Контакты</h2>
-        <dl class="contact-list">
+        <h2 class="address__title title">Контакты</h2>
+        <dl class="address__contact-list contact-list">
           <dt class="contact-list__title">Адрес</dt>
-          <dd class="contact-list__info">Санкт-Петербург, ул. Большая Конюшенная, 19</dd>
+          <dd class="contact-list__info">Санкт-Петербург, ул.&nbsp;Большая Конюшенная, 19</dd>
           <dt class="contact-list__title">Телефон</dt>
           <dd class="contact-list__info"><a href="tel:0079238889060"></a>+7 (923) 888-90-60</dd>
           <dt class="contact-list__title">E-mail</dt>
           <dd class="contact-list__info"><a href="mailto:info@maroon.ru">info@maroon.ru</a></dd>
         </dl>
         <ul class="page__social-media social-media">
-          <li class="social-media__item">
+          <li class="social-media__item social-media__item--margin">
             <a class="social-media__link" href="#">
               <span class="page__a11y-hidden">facebook</span>
               <svg width="11" height="20">
@@ -747,7 +754,7 @@
               </svg>
             </a>
           </li>
-          <li class="social-media__item">
+          <li class="social-media__item social-media__item--margin">
             <a class="social-media__link" href="#">
               <span class="page__a11y-hidden">instagram</span>
               <svg width="20" height="20">
@@ -755,7 +762,7 @@
               </svg>
             </a>
           </li>
-          <li class="social-media__item">
+          <li class="social-media__item social-media__item--margin">
             <a class="social-media__link" href="#">
               <span class="page__a11y-hidden">twitter</span>
               <svg width="20" height="20">
@@ -791,7 +798,7 @@
             </picture>
           </a>
           <ul class="page-footer__footer-nav footer-nav">
-            <li class="footer-nav__item"><a class="footer-nav__link">Каталог</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
             <li class="footer-nav__item"><a class="footer-nav__link" href="#">О нас</a></li>
             <li class="footer-nav__item"><a class="footer-nav__link" href="#">Магазины</a></li>
             <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>

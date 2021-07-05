@@ -1,13 +1,17 @@
 .determination {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 14px;
 }
 
 .determination tbody {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 18px;
+}
+
+.determination td {
+  padding: 0;
 }
 
 .determination__row {
