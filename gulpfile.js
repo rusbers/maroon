@@ -13,6 +13,7 @@ const svgsprite = require("gulp-svg-sprite");
 const rename = require("gulp-rename");
 const del = require("del");
 const sync = require("browser-sync").create();
+const terser = require("gulp-terser");
 
 // Styles
 
@@ -43,6 +44,18 @@ const html = () => {
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 }
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
 
 // Images
 
@@ -142,6 +155,7 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/img/icons/**/*.svg", gulp.series("svgstack"));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/script.js", gulp.series(scripts));
 }
 
 // Build
@@ -153,6 +167,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     svgstack,
     createWebp
   ),
@@ -169,6 +184,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
+    scripts,
     svgstack,
     createWebp
   ),
