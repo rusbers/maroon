@@ -21,6 +21,15 @@
 
 .flipping-page__flip {
   text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 
   &--prev {
     margin-right: 30px;

@@ -1,3 +1,15 @@
+.recently-viewed--margin {
+  margin-bottom: 76px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 114px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 134px;
+  }
+}
+
 .recently-viewed__title {
   margin: 0;
   margin-bottom: 33px;

@@ -42,3 +42,11 @@
     }
   }
 }
+
+.user-menu__link {
+  transition: all .1s;
+
+  &:hover {
+    opacity: 0.3;
+  }
+}

@@ -39,4 +39,9 @@
 .footer-nav__link {
   text-decoration: none;
   color: inherit;
+  transition: all .1s;
+
+  &:hover {
+    opacity: 0.3;
+  }
 }

@@ -158,3 +158,15 @@
     margin-bottom: 134px;
   }
 }
+
+.page__cart {
+  margin-bottom: 72px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 111px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 132px;
+  }
+}

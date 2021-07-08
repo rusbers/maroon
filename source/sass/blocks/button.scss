@@ -17,6 +17,7 @@
   border: 1px solid var(--grey-7, #b3bac1);
   border-radius: 2px;
   box-sizing: border-box;
+  transition: all 0.1s;
 
   @media(min-width: 768px) {
     font-size: 16px;
@@ -25,6 +26,14 @@
   &--form_open {
     border: none;
     padding: 0;
+  }
+
+  &:hover {
+    border-color: var(--dark-blue, #122947);
+  }
+
+  &:active {
+    opacity: .3;
   }
 }
 
