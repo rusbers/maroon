@@ -6,6 +6,11 @@
 
 .social-media__item {
   margin-right: 30px;
+  transition: all .1s;
+
+  &:hover {
+    opacity: .3;
+  }
 
   @media (min-width: 768px) {
     margin-right: 25px;

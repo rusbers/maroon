@@ -42,4 +42,9 @@
 .nav-list__link {
   text-decoration: none;
   color: var(--dark-blue);
+  transition: all 0.1s;
+
+  &:hover {
+    opacity: 0.3;
+  }
 }

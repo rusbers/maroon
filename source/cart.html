@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header"> <!-- page-header--mob-menu -->
     <div class="page-header__inner">
       <div class="page-header__top"> <!-- page-header__top--transparent -->
         <div class="page__container page-header__top-inner">
@@ -37,8 +37,8 @@
           </ul>
         </div>
       </div>
-      <div class="page__container page-header__bottom">
-        <nav class="main-nav">
+      <div class="page-header__bottom" style="display: none;">
+        <nav class="page__container main-nav">
           <button class="menu-btn" hidden>
             <span class="page__a11y-hidden">Кнопка меню</span>
             <svg class="menu-btn__opened" width="14" height="14">
@@ -48,39 +48,41 @@
               <use xlink:href="img/stack.svg#to-open"></use>
             </svg>
           </button>
-          <ul class="page-header__nav-list nav-list">
+          <ul class="page__container page-header__nav-list nav-list">
             <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
         <div class="page-header__social-media">
-          <ul class="social-media">
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">facebook</span>
-                <svg width="11" height="20">
-                  <use xlink:href="img/stack.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">instagram</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/stack.svg#insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a class="social-media__link" href="#">
-                <span class="page__a11y-hidden">twitter</span>
-                <svg width="20" height="20">
-                  <use xlink:href="img/stack.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="page__container">
+            <ul class="social-media">
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">facebook</span>
+                  <svg width="11" height="20">
+                    <use xlink:href="img/stack.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">instagram</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="img/stack.svg#insta"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-media__item">
+                <a class="social-media__link" href="#">
+                  <span class="page__a11y-hidden">twitter</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="img/stack.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -88,7 +90,7 @@
 
   <main class="page__container page-main">
     <h1 class="page__a11y-hidden">Карточка товара</h1>
-    <section class="cart">
+    <section class="page__cart cart">
       <div class="cart__desc">
         <h2 class="cart__title">Rose</h2>
         <p class="cart__lead">крем для лица</p>
@@ -96,7 +98,7 @@
           <p>Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей.</p>
           <p>Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток.</p>
         </div>
-        <dl class="product-details">
+        <dl class="cart__product-details product-details">
           <dt class="product-details__title">
             <span>Состав</span>
             <button class="product-details__expand expand" type="button">
@@ -159,33 +161,9 @@
         </picture>
       </div>
     </section>
-    <section class="view-more">
-      <h2 class="title">Вам также может понравиться</h2>
-      <ul class="goods-list">
-        <li class="goods-list__item">
-          <a class="product-link" href="#">
-            <article class="product">
-              <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
-                <source type="image/webp" srcset="img/content/catalog/small-screens/small-lotos@1x.jpg 1x, img/content/catalog/small-screens/small-lotos@2x.jpg 2x">
-                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
-                <img class="img" src="img/content/catalog/small-screens/small-lotos@1x.jpg" srcset="img/content/catalog/small-screens/small-lotos@2x.jpg 2x" width="290" height="290" alt="lorem">
-              </picture>
-              <table class="determination">
-                <tr class="determination__row determination__row--title">
-                  <td><h3 class="product__title">Lotos</h3></td>
-                  <td>890 &#8381;</td>
-                </tr>
-                <tr class="determination__row">
-                  <td><p class="product__description">маска для лица</p></td>
-                  <td>50ml</td>
-                </tr>
-              </table>
-            </article>
-          </a>
-        </li>
+    <section class="recently-viewed recently-viewed--margin">
+      <h2 class="recently-viewed__title title">Вам также может&nbsp;понравиться</h2>
+      <ul class="recently-viewed__goods-list goods-list">
         <li class="goods-list__item">
           <a class="product-link" href="#">
             <article class="product">
@@ -204,8 +182,34 @@
                     <td>490 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">маска для лица</p></td>
+                    <td><p class="product__description product__description--margin">маска для лица</p></td>
                     <td>100g</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </a>
+        </li>
+        <li class="goods-list__item">
+          <a class="product-link" href="#">
+            <article class="product">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
+                <source type="image/webp" srcset="img/content/catalog/small-screens/small-lotos@1x.jpg 1x, img/content/catalog/small-screens/small-lotos@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/content/catalog/big-screens/big-lotos@1x.jpg 1x, img/content/catalog/big-screens/big-lotos@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/content/catalog/medium-screens/med-lotos@1x.jpg 1x, img/content/catalog/medium-screens/med-lotos@2x.jpg 2x">
+                <img class="img" src="img/content/catalog/small-screens/small-lotos@1x.jpg" srcset="img/content/catalog/small-screens/small-lotos@2x.jpg 2x" width="290" height="290" alt="lorem">
+              </picture>
+              <table class="determination">
+                <tbody>
+                  <tr class="determination__row determination__row--title">
+                    <td><h3 class="product__title">Lotos</h3></td>
+                    <td>890 &#8381;</td>
+                  </tr>
+                  <tr class="determination__row">
+                    <td><p class="product__description product__description--margin">маска для лица</p></td>
+                    <td>50ml</td>
                   </tr>
                 </tbody>
               </table>
@@ -230,7 +234,7 @@
                     <td>290 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">мыло ручной работы</p></td>
+                    <td><p class="product__description product__description--margin">мыло ручной работы</p></td>
                     <td>50g</td>
                   </tr>
                 </tbody>
@@ -256,7 +260,7 @@
                     <td>990 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description">масло для тела</p></td>
+                    <td><p class="product__description product__description--margin">масло для тела</p></td>
                     <td>300ml</td>
                   </tr>
                 </tbody>
@@ -265,12 +269,13 @@
           </a>
         </li>
       </ul>
+
       <div class="pagination">
         <div class="pages">
           <a class="pages__page pages__page--current" href="#">1</a>
           <a class="pages__page pages__page--last" href="#">3</a>
         </div>
-        <div class="flipping-page flipping-page--width">
+        <div class="pagination__flipping-page flipping-page flipping-page--width">
           <a class="flipping-page__flip flipping-page__flip--prev" href="#">
             <span class="page__a11y-hidden">Листнуть назад</span>
             <svg width="26" height="12">

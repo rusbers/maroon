@@ -1,3 +1,15 @@
 .product-link {
   text-decoration: none;
 }
+
+.product-link .product {
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}

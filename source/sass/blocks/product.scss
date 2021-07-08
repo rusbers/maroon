@@ -76,6 +76,15 @@
   padding-bottom: 2px;
   text-align: center;
   margin-bottom: 19px;
+  transition: all 0.1s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: 768px) {
     margin-bottom: 26px;

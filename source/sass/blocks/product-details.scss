@@ -17,17 +17,37 @@
   font-size: 16px;
   font-weight: 500;
   border-top: 1px solid var(--grey-7, #b3bac1);
+  padding-top: 14px;
+  margin-bottom: 15px;
+  position: relative;
 
   @media (min-width: 768px) {
     font-size: 18px;
+    margin-bottom: 14px;
   }
 }
 
 .product-details__desc {
   margin: 0;
+  margin-bottom: 11px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 14px;
+  }
 }
 
 .product-details__expand {
-  position: static;
+  position: absolute;
   display: block;
+  top: initial;
+  right: 10px;
+
+  @media (min-width: 708px) {
+    right: 20px;
+  }
 }
