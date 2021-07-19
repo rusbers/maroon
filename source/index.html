@@ -11,11 +11,11 @@
 
 <body class="page__body">
 
-  <header class="page-header"> <!-- page-header--mob-menu -->
+  <header class="page-header page-header--mob-menu"> <!-- page-header--background page-header--transparent -->
     <div class="page-header__inner">
-      <div class="page-header__top"> <!-- page-header__top--transparent -->
+      <div class="page-header__top">
         <div class="page__container page-header__top-inner">
-          <a class="logo">
+          <a class="logo logo--index">
             <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
           </a>
           <ul class="page-header__user-menu user-menu">
@@ -40,7 +40,7 @@
       </div>
       <div class="page-header__bottom">
         <nav class="page__container main-nav">
-          <button class="menu-btn" hidden>
+          <button class="menu-btn menu-btn--close" hidden>
             <span class="page__a11y-hidden">Кнопка меню</span>
             <svg class="menu-btn__opened" width="14" height="14">
               <use xlink:href="img/stack.svg#to-close"></use>
@@ -49,13 +49,13 @@
               <use xlink:href="img/stack.svg#to-open"></use>
             </svg>
           </button>
-          <ul class="page__container page-header__nav-list nav-list">
+          <ul class="page__container page-header__nav-list nav-list nav-list--close">
             <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div class="page-header__social-media">
+        <div class="page-header__social-media page-header__social-media--close">
           <div class="page__container">
             <ul class="social-media">
               <li class="social-media__item">
@@ -89,7 +89,7 @@
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main--index">
 
     <h1 class="page__a11y-hidden">Главная страница магазина косметики Maroon</h1>
 
@@ -346,7 +346,7 @@
     <div class="page-footer__nav">
       <div class="page__container">
         <div class="page-footer__nav-inner">
-          <a class="page-footer__logo logo">
+          <a class="page-footer__logo logo logo--index">
             <picture>
               <source media="(min-width: 768px)" srcset="img/logo/logo-big.svg">
               <img class="logo__img" src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
@@ -392,6 +392,7 @@
       <p><a class="privacy-link" href="#">Политика конфиденциальности</a></p>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
