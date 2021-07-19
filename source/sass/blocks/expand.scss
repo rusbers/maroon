@@ -1,11 +1,21 @@
 .expand {
+  display: none;
   border: none;
   background: transparent;
   padding: 0;
   position: absolute;
   top: -38px;
   right: 0;
+  height: 30px;
+}
 
+.js-enabled .expand {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.js-enabled .expand--display_n {
   @media (min-width: 768px) {
     display: none;
   }
@@ -18,4 +28,17 @@
   @media (min-width: 1200px) {
     margin-right: -5px;
   }
+}
+
+.expand__opened {
+  position: absolute;
+  top: 10px;
+}
+
+.expand--close .expand__closed {
+  display: block;
+}
+
+.expand--close .expand__opened {
+  display: none;
 }

@@ -10,9 +10,11 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header"> <!-- page-header--mob-menu -->
+
+  <header class="page-header page-header--mob-menu">
     <div class="page-header__inner">
-      <div class="page-header__top"> <!-- page-header__top--transparent -->
+      <div class="page-header__top">
+        <!-- page-header__top--transparent -->
         <div class="page__container page-header__top-inner">
           <a class="logo" href="index.html">
             <img src="img/logo/logo-mob.svg" width="85" height="13" alt="lorem">
@@ -37,9 +39,9 @@
           </ul>
         </div>
       </div>
-      <div class="page-header__bottom" style="display: none;">
+      <div class="page-header__bottom">
         <nav class="page__container main-nav">
-          <button class="menu-btn" hidden>
+          <button class="menu-btn menu-btn--close" hidden>
             <span class="page__a11y-hidden">Кнопка меню</span>
             <svg class="menu-btn__opened" width="14" height="14">
               <use xlink:href="img/stack.svg#to-close"></use>
@@ -48,13 +50,13 @@
               <use xlink:href="img/stack.svg#to-open"></use>
             </svg>
           </button>
-          <ul class="page__container page-header__nav-list nav-list">
+          <ul class="page__container page-header__nav-list nav-list nav-list--close">
             <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
           </ul>
         </nav>
-        <div class="page-header__social-media">
+        <div class="page-header__social-media page-header__social-media--close">
           <div class="page__container">
             <ul class="social-media">
               <li class="social-media__item">
@@ -98,38 +100,42 @@
           <p>Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей.</p>
           <p>Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток.</p>
         </div>
-        <dl class="cart__product-details product-details">
-          <dt class="product-details__title">
-            <span>Состав</span>
-            <button class="product-details__expand expand" type="button">
-              <span class="page__a11y-hidden">Развернуть</span>
-              <svg class="expand__opened" width="12" height="2">
-                <use xlink:href="img/stack.svg#minus"></use>
-              </svg>
-              <svg class="expand__closed" width="12" height="12">
-                <use xlink:href="img/stack.svg#plus"></use>
-              </svg>
-            </button>
-          </dt>
-          <dd class="product-details__desc">
-            Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.
-          </dd>
-          <dt class="product-details__title">
-            <span>Способ применения</span>
-            <button class="product-details__expand expand" type="button">
-              <span class="page__a11y-hidden">Развернуть</span>
-              <svg class="expand__opened" width="12" height="2">
-                <use xlink:href="img/stack.svg#minus"></use>
-              </svg>
-              <svg class="expand__closed" width="12" height="12">
-                <use xlink:href="img/stack.svg#plus"></use>
-              </svg>
-            </button>
-          </dt>
-          <dd class="product-details__desc">
-            Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода.
-          </dd>
-        </dl>
+        <ul class="cart__product-details product-details">
+          <li class="accordion">
+            <div class="product-details__title accordion__head">
+              <span>Состав</span>
+              <button class="product-details__expand expand expand--close" type="button">
+                <span class="page__a11y-hidden">Развернуть опции</span>
+                <svg class="expand__opened" width="12" height="2">
+                  <use xlink:href="img/stack.svg#minus"></use>
+                </svg>
+                <svg class="expand__closed" width="12" height="12">
+                  <use xlink:href="img/stack.svg#plus"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="product-details__desc accordion__content">
+              Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.
+            </div>
+          </li>
+          <li>
+            <div class="product-details__title accordion__head">
+              <span>Способ применения</span>
+              <button class="product-details__expand expand expand--close" type="button">
+                <span class="page__a11y-hidden">Развернуть опции</span>
+                <svg class="expand__opened" width="12" height="2">
+                  <use xlink:href="img/stack.svg#minus"></use>
+                </svg>
+                <svg class="expand__closed" width="12" height="12">
+                  <use xlink:href="img/stack.svg#plus"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="product-details__desc accordion__content">
+              Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода.
+            </div>
+          </li>
+        </ul>
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
           <div class="form__fieldset form__fieldset--cart-layout" role="group" aria-labelledby="pseudolegend">
             <div class="form__legend form__legend--fontset form__legend--cart-layout" id="pseudolegend">Объем:</div>
@@ -178,11 +184,15 @@
               <table class="determination">
                 <tbody>
                   <tr class="determination__row determination__row--title">
-                    <td><h3 class="product__title">Clean</h3></td>
+                    <td>
+                      <h3 class="product__title">Clean</h3>
+                    </td>
                     <td>490 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description product__description--margin">маска для лица</p></td>
+                    <td>
+                      <p class="product__description product__description--margin">маска для лица</p>
+                    </td>
                     <td>100g</td>
                   </tr>
                 </tbody>
@@ -204,11 +214,15 @@
               <table class="determination">
                 <tbody>
                   <tr class="determination__row determination__row--title">
-                    <td><h3 class="product__title">Lotos</h3></td>
+                    <td>
+                      <h3 class="product__title">Lotos</h3>
+                    </td>
                     <td>890 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description product__description--margin">маска для лица</p></td>
+                    <td>
+                      <p class="product__description product__description--margin">маска для лица</p>
+                    </td>
                     <td>50ml</td>
                   </tr>
                 </tbody>
@@ -230,11 +244,15 @@
               <table class="determination">
                 <tbody>
                   <tr class="determination__row determination__row--title">
-                    <td><h3 class="product__title">Lavander</h3></td>
+                    <td>
+                      <h3 class="product__title">Lavander</h3>
+                    </td>
                     <td>290 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description product__description--margin">мыло ручной работы</p></td>
+                    <td>
+                      <p class="product__description product__description--margin">мыло ручной работы</p>
+                    </td>
                     <td>50g</td>
                   </tr>
                 </tbody>
@@ -256,11 +274,15 @@
               <table class="determination">
                 <tbody>
                   <tr class="determination__row determination__row--title">
-                    <td><h3 class="product__title">Coconut</h3></td>
+                    <td>
+                      <h3 class="product__title">Coconut</h3>
+                    </td>
                     <td>990 &#8381;</td>
                   </tr>
                   <tr class="determination__row">
-                    <td><p class="product__description product__description--margin">масло для тела</p></td>
+                    <td>
+                      <p class="product__description product__description--margin">масло для тела</p>
+                    </td>
                     <td>300ml</td>
                   </tr>
                 </tbody>
@@ -344,6 +366,7 @@
     </div>
   </footer>
   <script src="js/script.min.js"></script>
+
 </body>
 
 </html>

@@ -21,6 +21,12 @@
   }
 }
 
+.js-enabled .nav-list--close {
+  @media (max-width: 1199.9px) {
+    display: none;
+  }
+}
+
 .nav-list__item {
   margin-right: 35px;
   margin-bottom: 19px;

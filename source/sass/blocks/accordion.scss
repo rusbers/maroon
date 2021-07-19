@@ -1,0 +1,19 @@
+.accordion__content {
+  height: 0;
+  overflow: hidden;
+
+  &.accordion__content--height_a {
+    @media (min-width: 768px) {
+      height: auto;
+    }
+  }
+}
+
+.accordion--active .accordion__content {
+  height: auto;
+}
+
+.accordion--active .form__choice-list {
+  padding-top: 16px;
+  padding-bottom: 17px;
+}

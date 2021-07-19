@@ -1,4 +1,4 @@
-.sorting--position_r {
+.js-enabled .sorting--position_r {
   position: relative;
 }
 
@@ -10,12 +10,11 @@
   margin-bottom: 34px;
 
   @media (min-width: 768px) {
-    padding-top: 39px;
-    margin-bottom: 33px;
+    padding-top: 9px;
+    margin-bottom: 21px;
   }
 
   @media (min-width: 1200px) {
-    padding-top: 39px;
     margin-bottom: 32px;
   }
 }
@@ -25,6 +24,11 @@
 }
 
 .sorting__button {
+  display: none;
+  padding: 0;
+  border: none;
+  transition: none;
+
   @media (min-width: 768px) {
     min-width: 140px
   }
@@ -34,6 +38,28 @@
   }
 }
 
+.sorting__button--close {
+  display: block;
+  padding: 5px 28px;
+  border: 1px solid var(--grey-7, #b3bac1);
+}
+
+.js-enabled .sorting__button {
+  display: block;
+
+  @media(min-width: 768px) {
+    display: flex;
+  }
+}
+
+.sorting__button--close .button__icon {
+  display: none;
+}
+
+.sorting__button--close .button__text {
+  display: block;
+}
+
 .sorting__button svg {
   @media (min-width: 768px) {
     margin-left: auto;
@@ -41,9 +67,15 @@
 }
 
 .sorting__form {
-  padding-bottom: 60px;
+  padding-bottom: 83px;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     padding-bottom: 121px;
   }
+}
+
+.sorting__form--close {
+  height: 0;
+  padding: 0;
 }

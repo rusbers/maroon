@@ -1,4 +1,8 @@
 .flipping-page {
+  display: none;
+}
+
+.flipping-page {
   display: flex;
 
   &--width {

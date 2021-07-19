@@ -2,7 +2,12 @@
   list-style: none;
   padding: 0;
   padding-top: 16px;
-  border-top: 1px solid var(--grey-5, #dbdce0);
+  // overflow: hidden;
+
+  // @media (max-width: 767.9px) {
+  //   height: 0;
+  //   padding: 0;
+  // }
 
   @media (min-width: 768px) {
     border-top: none;
@@ -29,10 +34,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  // @media (min-width: 768px) {
-  //   padding-bottom: 12px;
-  // }
 
   &--cart {
     margin: 0;

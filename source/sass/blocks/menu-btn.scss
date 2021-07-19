@@ -27,6 +27,7 @@
 }
 
 .menu-btn__closed {
+  display: none;
   width: 22px;
   height: 13px;
 
@@ -34,4 +35,18 @@
     width: 23px;
     height: 17px;
   }
+}
+
+.js-enabled .menu-btn {
+  @media (max-width: 1199.9px) {
+    display: block;
+  }
+}
+
+.menu-btn--close .menu-btn__closed {
+  display: block;
+}
+
+.menu-btn--close .menu-btn__opened {
+  display: none;
 }
